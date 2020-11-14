@@ -1,19 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import TextTransition, { presets } from 'react-text-transition';
+import { bool } from 'prop-types';
 
 const MainText = styled.div`
-  margin-left: 0;
-  margin-right: 0;
-  padding-left: 4em;
-  padding-right: 4em;
-  padding-bottom: 4em;
+  margin-left: ${({ open }) => (open ? '8em' : '3em')};
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-right: 3em;
   display: block;
   font-size: 2.8em;
   font-weight: 700;
   line-height: 1.1;
   -webkit-font-smoothing: antialiased;
   color: purple;
+  transition: 0.5s all ease-out;
 
   @media (max-width: 768px) {
     max-width: 1400px;
@@ -23,7 +24,7 @@ const SpanText = styled.span`
   color: red;
 `;
 
-const Home = () => {
+const Home = ({ open }) => {
   const [index, setIndex] = useState(0);
   const [dateTime, setDateTime] = useState(new Date());
 
@@ -41,7 +42,7 @@ const Home = () => {
   const today = dateTime.toLocaleDateString('de', { weekday: 'long' });
   return (
     <>
-      <MainText>
+      <MainText open={open}>
         Lorem ipsum dolor sit {''}
         <SpanText>
           <TextTransition
@@ -53,13 +54,17 @@ const Home = () => {
         consectetur adipisicing elit. Molestiae repudiandae architecto qui
         adipisci in officiis, aperiam sequi atque perferendis eos, autem maiores
         nisi saepe quisquam hic odio consectetur nobis veritatis quasi explicabo
-        obcaecati doloremque? Placeat ratione hic aspernatur error blanditiis?
-        Have a nice Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Officia sint ex non temporibus iusto cum. Dolores incidunt mollitia quae
-        eos. Voluptatibus rem blanditiis id earum sed. Molestiae veniam
-        cupiditate corrupti rem, sed quis sapiente mollitia aliquam
-        exercitationem labore placeat doloribus quaerat, soluta optio expedita
-        iure consequatur necessitatibus suscipit similique consequuntur?
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo deleniti,
+        corporis maiores illo quis voluptate nisi, non porro reiciendis nostrum
+        ea ex nam incidunt corrupti facere id eos praesentium quisquam quasi ut
+        dicta neque deserunt commodi quibusdam. Sequi asperiores sunt officiis
+        cupiditate molestias eius fuga perferendis fugiat dolor, porro
+        dignissimos! Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+        Molestiae aliquid quae, corrupti architecto sunt ab assumenda, sint quos
+        inventore dolor voluptate ipsam. Neque temporibus vitae, in nobis quo
+        accusantium sit impedit dicta eveniet, molestias, explicabo fugiat iste
+        aperiam. Aperiam ipsa dicta doloremque recusandae officia nemo iusto
+        laborum, consequatur corrupti iure.
         <SpanText>{today}</SpanText>
       </MainText>
     </>

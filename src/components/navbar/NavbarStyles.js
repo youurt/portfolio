@@ -19,6 +19,7 @@ const NavbarStyles = styled.div`
     background: transparent;
     border-color: transparent;
     transition: var(--transition);
+    border: none;
     cursor: pointer;
   }
 

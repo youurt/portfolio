@@ -3,9 +3,9 @@ import styled from 'styled-components';
 const LeftInfo = styled.div`
   width: 11.7rem;
   position: fixed;
-  transform: rotate(-90deg);
-  top: 8.25rem;
-  left: -3.4rem;
+  transform: rotate(90deg);
+  top: 13.25rem;
+  right: -2.75rem;
   font-size: 1.5em;
   font-weight: 700;
   color: purple;
@@ -22,7 +22,7 @@ const RightInfo = styled.a`
   transform: rotate(90deg);
   bottom: 8.25rem;
   right: -2.75rem;
-  width: 10.25rem;
+  width: 11.7rem;
   position: fixed;
   color: inherit;
   text-align: center;
