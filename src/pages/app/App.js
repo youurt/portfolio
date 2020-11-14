@@ -1,28 +1,30 @@
 import React, { useState, useRef } from 'react';
 import { ThemeProvider } from 'styled-components';
-import { Border, Info, Navbar, Burger, Menu } from './../../components/';
+import { useOnClickOutside, useDarkMode } from './../../hooks';
+import { Border, Info, Burger, Menu, Toggle } from './../../components/';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import About from './../about/About';
 import Home from './../home/Home';
 import AppStyles from './AppStyles';
-import { theme } from './theme';
-import { useOnClickOutside } from './hooks';
+import { darkTheme, lightTheme } from './theme';
 
 const App = () => {
   const [open, setOpen] = useState(false);
+  const [theme, themeToggler] = useDarkMode();
   const node = useRef();
   useOnClickOutside(node, () => setOpen(false));
+  const themeMode = theme === 'light' ? lightTheme : darkTheme;
+
   return (
     <Router>
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={themeMode}>
         <AppStyles />
         <div ref={node}>
           <Burger open={open} setOpen={setOpen} />
           <Menu open={open} />
+          <Toggle theme={theme} toggleTheme={themeToggler} />
         </div>
         <Border />
-        {/* <Border />
-      <Navbar /> */}
         <Info open={open} />
         <Switch>
           <Route exact path='/'>

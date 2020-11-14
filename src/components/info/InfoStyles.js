@@ -5,23 +5,21 @@ const LeftInfo = styled.div`
   position: fixed;
   transform: rotate(90deg);
   top: 13.25rem;
-  right: -2.75rem;
+  right: -4rem;
   font-size: 1.5em;
   font-weight: 700;
   color: purple;
   display: flex;
   text-align: center;
   padding-top: 1.6em;
-  margin-block-start: 1em;
+  margin-block-start: 6em;
   margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
 `;
 
-const RightInfo = styled.a`
+const RightInfo = styled.div`
   transform: rotate(90deg);
   bottom: 8.25rem;
-  right: -2.75rem;
+  right: -4rem;
   width: 11.7rem;
   position: fixed;
   color: inherit;
@@ -32,8 +30,7 @@ const RightInfo = styled.a`
   padding-top: 1.6em;
   margin-block-start: 1em;
   margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
+
   text-decoration: none;
 `;
 const SpanText = styled.span`

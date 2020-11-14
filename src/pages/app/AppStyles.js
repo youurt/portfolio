@@ -13,6 +13,7 @@ const AppStyles = createGlobalStyle`
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     justify-content: center;
     text-rendering: optimizeLegibility;
+    transition: all 0.50s linear;
   }
 
   h1 {
