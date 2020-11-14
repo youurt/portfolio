@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 const Left = styled.div`
+  z-index: 100;
   background: purple;
   position: fixed;
   left: 0;
@@ -9,6 +10,7 @@ const Left = styled.div`
   width: 20px;
 `;
 const Right = styled.div`
+  z-index: 100;
   background: purple;
   position: fixed;
   right: 0;
@@ -17,6 +19,7 @@ const Right = styled.div`
   width: 20px;
 `;
 const Top = styled.div`
+  z-index: 100;
   background: purple;
   position: fixed;
   top: 0;
@@ -25,6 +28,7 @@ const Top = styled.div`
   height: 20px;
 `;
 const Bottom = styled.div`
+  z-index: 100;
   background: purple;
   position: fixed;
   bottom: 0;

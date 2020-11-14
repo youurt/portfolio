@@ -54,7 +54,13 @@ const Home = () => {
         adipisci in officiis, aperiam sequi atque perferendis eos, autem maiores
         nisi saepe quisquam hic odio consectetur nobis veritatis quasi explicabo
         obcaecati doloremque? Placeat ratione hic aspernatur error blanditiis?
-        Have a nice <SpanText>{today}</SpanText>
+        Have a nice Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Officia sint ex non temporibus iusto cum. Dolores incidunt mollitia quae
+        eos. Voluptatibus rem blanditiis id earum sed. Molestiae veniam
+        cupiditate corrupti rem, sed quis sapiente mollitia aliquam
+        exercitationem labore placeat doloribus quaerat, soluta optio expedita
+        iure consequatur necessitatibus suscipit similique consequuntur?
+        <SpanText>{today}</SpanText>
       </MainText>
     </>
   );

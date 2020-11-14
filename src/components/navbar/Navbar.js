@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { FaBars, FaUnderline } from 'react-icons/fa';
 import { links, social } from './../../data/data';
+import NavbarStyles from './NavbarStyles';
 
 export const Navbar = () => {
   const [showLinks, setShowLinks] = useState(false);
@@ -21,7 +22,7 @@ export const Navbar = () => {
   }, [showLinks]);
 
   return (
-    <nav>
+    <NavbarStyles>
       <div className='nav-center'>
         <div className='nav-header'>
           <div className='logo'>
@@ -55,6 +56,6 @@ export const Navbar = () => {
           })}
         </ul>
       </div>
-    </nav>
+    </NavbarStyles>
   );
 };

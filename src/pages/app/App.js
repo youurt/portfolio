@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import './App.css';
 
 import { Border, Info, Navbar } from './../../components/';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import About from './../about/About';
 import Home from './../home/Home';
+import AppStyles from './AppStyles';
 
 const App = () => {
   return (
     <Router>
+      <AppStyles />
       <Border />
       <Navbar />
       <Info />
