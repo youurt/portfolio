@@ -1,8 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { FaBars, FaUnderline } from 'react-icons/fa';
-import { links, social } from './../data';
+import { links, social } from './../../data/data';
 
-const Navbar = () => {
+export const Navbar = () => {
   const [showLinks, setShowLinks] = useState(false);
   const linksContainerRef = useRef(null);
   const linksRef = useRef(null);
@@ -58,5 +58,3 @@ const Navbar = () => {
     </nav>
   );
 };
-
-export default Navbar;

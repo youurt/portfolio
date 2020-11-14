@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 
 const Left = styled.div`
@@ -34,15 +33,4 @@ const Bottom = styled.div`
   height: 20px;
 `;
 
-const Border = () => {
-  return (
-    <>
-      <Left />
-      <Right />
-      <Top />
-      <Bottom />
-    </>
-  );
-};
-
-export default Border;
+export { Left, Right, Top, Bottom };
