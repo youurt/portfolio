@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { ThemeProvider } from 'styled-components';
 import { useOnClickOutside, useDarkMode } from './../../hooks';
-import { Border, Info, Burger, Menu, Toggle } from './../../components/';
+import { Border, Info, Burger, Menu, Toggle, Logo } from './../../components/';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import About from './../about/About';
 import Home from './../home/Home';
@@ -25,6 +25,7 @@ const App = () => {
         <AppStyles />
         <div ref={node}>
           <Burger theme={theme} open={open} setOpen={setOpen} />
+          <Logo theme={theme} />
           <Menu open={open} />
           <Toggle theme={theme} toggleTheme={themeToggler} />
         </div>
