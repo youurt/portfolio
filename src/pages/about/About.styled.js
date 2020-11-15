@@ -58,3 +58,14 @@ export const Label = styled.p`
   text-transform: uppercase;
   margin-bottom: 10px;
 `;
+
+export const LabelRight = styled.p`
+  text-align: right;
+  opacity: 0.75;
+  bottom: 0;
+  right: 13px;
+  font-size: 0.583333rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+`;
