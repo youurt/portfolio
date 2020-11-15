@@ -17,25 +17,23 @@ export const StyledMenu = styled.nav`
   @media (max-width: ${({ theme }) => theme.mobile}) {
     width: 100%;
   }
+`;
 
-  li {
-    font-size: 2.8em;
-    font-weight: 700;
-    text-transform: uppercase;
-    padding: 2rem 0;
-    font-weight: bold;
-    letter-spacing: 0.5rem;
-    color: purple;
-    text-decoration: none;
-    transition: color 0.3s linear;
+export const Links = styled.li`
+  font-size: 2.8em;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 2rem 0;
+  font-weight: bold;
+  letter-spacing: 0.5rem;
+  text-decoration: none;
+  transition: color 0.3s linear;
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    font-size: 1.5rem;
+    text-align: center;
+  }
 
-    @media (max-width: ${({ theme }) => theme.mobile}) {
-      font-size: 1.5rem;
-      text-align: center;
-    }
-
-    &:hover {
-      color: ${({ theme }) => theme.primaryHover};
-    }
+  &:hover {
+    color: ${({ theme }) => theme.primaryHover};
   }
 `;

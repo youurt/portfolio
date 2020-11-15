@@ -3,8 +3,7 @@ import { ThemeProvider } from 'styled-components';
 import { useOnClickOutside, useDarkMode } from './../../hooks';
 import { Border, Info, Burger, Menu, Toggle, Logo } from './../../components/';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import About from './../about/About';
-import Home from './../home/Home';
+import { Home, About, Ideas, Work } from './../../pages';
 import AppStyles from './AppStyles';
 import { darkTheme, lightTheme } from './theme';
 
@@ -26,7 +25,7 @@ const App = () => {
         <div ref={node}>
           <Burger theme={theme} open={open} setOpen={setOpen} />
           <Logo theme={theme} />
-          <Menu open={open} />
+          <Menu open={open} theme={theme} />
           <Toggle theme={theme} toggleTheme={themeToggler} />
         </div>
         <Border />
@@ -37,6 +36,12 @@ const App = () => {
           </Route>
           <Route path='/about'>
             <About />
+          </Route>
+          <Route path='/ideas'>
+            <Ideas />
+          </Route>
+          <Route path='/work'>
+            <Work />
           </Route>
         </Switch>
       </ThemeProvider>

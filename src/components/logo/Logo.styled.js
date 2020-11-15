@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Logo = styled.div`
-  font-size: 1.5rem;
+  font-size: 2rem;
   transition: var(--transition);
   color: ${({ theme }) => (theme === 'light' ? 'purple' : 'red')};
   position: fixed;

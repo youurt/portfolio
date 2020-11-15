@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function About() {
+export const About = () => {
   return (
     <section className='section about-section'>
       <h1 className='section-title'>about us</h1>
@@ -13,4 +13,4 @@ export default function About() {
       </p>
     </section>
   );
-}
+};
