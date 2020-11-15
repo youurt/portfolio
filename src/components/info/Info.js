@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { LeftInfo, RightInfo, SpanText } from './InfoStyles';
 import TextTransition, { presets } from 'react-text-transition';
 
-export const Info = ({ open }) => {
+export const Info = () => {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
@@ -17,7 +17,7 @@ export const Info = ({ open }) => {
   const TEXTS_LANG = ['Python', 'React', 'Frontend', 'UI', 'Data'];
   return (
     <>
-      <LeftInfo open={open}>
+      <LeftInfo>
         <SpanText>
           <TextTransition
             text={TEXTS_LANG[index % TEXTS_LANG.length]}

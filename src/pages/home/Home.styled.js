@@ -15,6 +15,7 @@ const MainText = styled.div`
 
   @media (max-width: 768px) {
     max-width: 1400px;
+    font-size: 1.8em;
   }
 `;
 const SpanText = styled.span`

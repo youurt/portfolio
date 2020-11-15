@@ -1,28 +1,6 @@
 import React from 'react';
 import { func, string } from 'prop-types';
-import styled from 'styled-components';
-
-const Button = styled.div`
-  background: ${({ theme }) => theme.iconColor};
-  color: ${({ theme }) => theme.iconColor};
-
-  position: fixed;
-  top: 5%;
-  right: 3rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  width: 2rem;
-  height: 2rem;
-  background: transparent;
-  border: none;
-  padding: 0;
-  z-index: 10;
-
-  &:focus {
-    outline: none;
-  }
-`;
+import { Button } from './Toggler.styled';
 
 export const Toggle = ({ theme, toggleTheme, size = 50 }) => {
   // return <Button onClick={toggleTheme}>Switch Theme</Button>;

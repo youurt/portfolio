@@ -13,7 +13,6 @@ const App = () => {
   const node = useRef();
   useOnClickOutside(node, () => setOpen(false));
   const themeMode = theme === 'light' ? lightTheme : darkTheme;
-  console.log(componentMounted);
   if (!componentMounted) {
     return <div />;
   }
@@ -27,15 +26,16 @@ const App = () => {
           <Logo theme={theme} />
           <Menu open={open} theme={theme} />
           <Toggle theme={theme} toggleTheme={themeToggler} />
+          <Border />
+          <Info />
         </div>
-        <Border />
-        <Info open={open} />
+
         <Switch>
           <Route exact path='/'>
             <Home open={open} />
           </Route>
           <Route path='/about'>
-            <About />
+            <About open={open} />
           </Route>
           <Route path='/ideas'>
             <Ideas />

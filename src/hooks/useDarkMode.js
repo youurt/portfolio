@@ -9,10 +9,6 @@ export const useDarkMode = () => {
     setTheme(mode);
   };
 
-  console.log('theme', theme);
-  const localTheme = window.localStorage.getItem('theme');
-  console.log('local', localTheme);
-
   const themeToggler = () => {
     if (theme === 'light') {
       setMode('dark');

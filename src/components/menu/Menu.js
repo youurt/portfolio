@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyledMenu, Links } from './Menu.styled';
-import { bool } from 'prop-types';
+import { bool, string } from 'prop-types';
 import { Link } from 'react-router-dom';
 import { links } from './MenuData';
 
@@ -20,5 +20,5 @@ export const Menu = ({ open, theme }) => {
 };
 Menu.propTypes = {
   open: bool.isRequired,
-  theme: bool.isRequired,
+  theme: string.isRequired,
 };
