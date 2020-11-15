@@ -2,9 +2,9 @@ import React from 'react';
 import { StyledBurger } from './Burger.styled';
 import { bool, func } from 'prop-types';
 
-export const Burger = ({ open, setOpen }) => {
+export const Burger = ({ open, setOpen, theme }) => {
   return (
-    <StyledBurger open={open} onClick={() => setOpen(!open)}>
+    <StyledBurger open={open} theme={theme} onClick={() => setOpen(!open)}>
       <div />
       <div />
       <div />

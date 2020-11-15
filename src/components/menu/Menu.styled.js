@@ -18,7 +18,7 @@ export const StyledMenu = styled.nav`
     width: 100%;
   }
 
-  a {
+  li {
     font-size: 2.8em;
     font-weight: 700;
     text-transform: uppercase;

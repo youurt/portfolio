@@ -10,17 +10,21 @@ import { darkTheme, lightTheme } from './theme';
 
 const App = () => {
   const [open, setOpen] = useState(false);
-  const [theme, themeToggler] = useDarkMode();
+  const [theme, themeToggler, componentMounted] = useDarkMode();
   const node = useRef();
   useOnClickOutside(node, () => setOpen(false));
   const themeMode = theme === 'light' ? lightTheme : darkTheme;
+  console.log(componentMounted);
+  if (!componentMounted) {
+    return <div />;
+  }
 
   return (
     <Router>
       <ThemeProvider theme={themeMode}>
         <AppStyles />
         <div ref={node}>
-          <Burger open={open} setOpen={setOpen} />
+          <Burger theme={theme} open={open} setOpen={setOpen} />
           <Menu open={open} />
           <Toggle theme={theme} toggleTheme={themeToggler} />
         </div>

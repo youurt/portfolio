@@ -1,13 +1,16 @@
 import React from 'react';
 import { StyledMenu } from './Menu.styled';
 import { bool } from 'prop-types';
+import { Link } from 'react-router-dom';
 
 export const Menu = ({ open }) => {
   return (
     <StyledMenu open={open}>
-      <a href='/'>About us</a>
-      <a href='/'>Pricing</a>
-      <a href='/'>Contact</a>
+      <ul>
+        <li>
+          <Link to='/about'>About</Link>
+        </li>
+      </ul>
     </StyledMenu>
   );
 };
