@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
-const AppStyles = createGlobalStyle`
+const GlobalTheme = createGlobalStyle`
 
   *, *::after, *::before {
     box-sizing: border-box;
@@ -15,6 +15,16 @@ const AppStyles = createGlobalStyle`
     justify-content: center;
     text-rendering: optimizeLegibility;
     transition: all 0.25s linear;
+
+
+  }
+
+
+  main{
+    @media (max-width: 768px) {
+    filter: ${({ open }) => (open ? 'blur(5px)' : 'none')};
+  }
+    
   }
 
   p{
@@ -50,4 +60,4 @@ const AppStyles = createGlobalStyle`
   }
 `;
 
-export default AppStyles;
+export default GlobalTheme;
