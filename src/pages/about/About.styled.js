@@ -3,19 +3,19 @@ import styled from 'styled-components';
 export const Container = styled.div`
   margin-left: ${({ open }) => (open ? '8em' : '3em')};
   display: block;
-
+  max-width: ${({ open }) => (open ? '1024px' : '1524px')};
   margin-right: 3em;
-  margin-top: 10vw;
-  width: 1075px;
-  max-width: 70vw;
-  transition: 0.5s all ease-out;
+  margin-top: 5em;
+  margin-bottom: 5em;
+  /* width: 1075px; */
+  transition: 0.3s all ease-out;
 `;
 
 export const Grid = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 12px;
-  margin-bottom: 12px;
+
   @media screen and (max-width: 660px) {
     display: flex;
     flex-direction: column;

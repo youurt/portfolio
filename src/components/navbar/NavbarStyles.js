@@ -7,7 +7,7 @@ const NavbarStyles = styled.div`
 
   .nav-header {
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     justify-content: space-between;
     padding: 1rem;
     margin: 1rem 1rem;

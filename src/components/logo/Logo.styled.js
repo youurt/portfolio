@@ -1,12 +1,11 @@
 import styled from 'styled-components';
 
 export const Logo = styled.div`
-  font-size: 2rem;
   transition: var(--transition);
   color: ${({ theme }) => (theme === 'light' ? 'purple' : 'red')};
-  position: fixed;
-  top: 90%;
-  left: 3rem;
+  /* position: fixed; */
+  /* top: 90%; */
+  /* left: 3rem; */
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -15,6 +14,7 @@ export const Logo = styled.div`
   background: transparent;
   border: none;
   cursor: pointer;
-  padding: 0;
+  margin-left: 4em;
+  margin-bottom: 2em;
   z-index: 10;
 `;

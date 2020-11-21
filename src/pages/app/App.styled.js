@@ -2,15 +2,19 @@ import { createGlobalStyle } from 'styled-components';
 
 const GlobalTheme = createGlobalStyle`
 
+
   *, *::after, *::before {
     box-sizing: border-box;
+    
   }
   
+
+
   body {
-    align-items: center;
+    /* align-items: center; */
     background: ${({ theme }) => theme.primaryDark};
     color: ${({ theme }) => theme.primaryLight};
-    display: flex;
+    /* display: flex; */
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     justify-content: center;
     text-rendering: optimizeLegibility;
@@ -18,14 +22,15 @@ const GlobalTheme = createGlobalStyle`
 
 
   }
+  
+  /* main{
 
-
-  main{
     @media (max-width: 768px) {
     filter: ${({ open }) => (open ? 'blur(5px)' : 'none')};
-  }
-    
-  }
+    }
+  } */
+
+  
 
   p{
     display: block;

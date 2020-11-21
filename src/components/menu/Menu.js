@@ -3,10 +3,12 @@ import { StyledMenu, Links } from './Menu.styled';
 import { bool, string } from 'prop-types';
 import { Link } from 'react-router-dom';
 import { links } from './MenuData';
+import { Burger } from './../../components';
 
 export const Menu = ({ open, theme }) => {
   return (
     <StyledMenu open={open} theme={theme}>
+      <div></div>
       {links.map((link) => {
         const { id, url, text } = link;
         return (
@@ -15,6 +17,7 @@ export const Menu = ({ open, theme }) => {
           </Links>
         );
       })}
+      <div></div>
     </StyledMenu>
   );
 };

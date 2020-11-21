@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { FaBars, FaUnderline } from 'react-icons/fa';
-import { links, social } from './../../data/data';
+import { links, social } from './NavbarData';
 import NavbarStyles from './NavbarStyles';
 
 export const Navbar = () => {
