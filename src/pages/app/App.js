@@ -1,90 +1,34 @@
-import React, { useState, useRef } from 'react';
+import React from 'react';
 import { ThemeProvider } from 'styled-components';
-import { useOnClickOutside, useDarkMode } from './../../hooks';
-import {
-  Border,
-  LeftInfo,
-  RightInfo,
-  Burger,
-  Menu,
-  Toggle,
-  Logo,
-  Test,
-  Navbar,
-} from './../../components/';
+import { useDarkMode } from './../../hooks';
+import { Border, LeftInfo, RightInfo, Navbar } from './../../components/';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { Home, About, Ideas, Work, Blur } from './../../pages';
-import GlobalTheme from './App.styled';
+import { Home, About, Ideas, Work } from './../../pages';
+import {
+  GlobalTheme,
+  GridLayout,
+  Nav,
+  AsideLeft,
+  AsideRight,
+  Main,
+  Footer,
+} from './App.styled';
 import { darkTheme, lightTheme } from './theme';
-import styled from 'styled-components';
 
 const App = () => {
-  const [open, setOpen] = useState(false);
   const [theme, themeToggler, componentMounted] = useDarkMode();
-  const node = useRef();
-  useOnClickOutside(node, () => setOpen(false));
   const themeMode = theme === 'light' ? lightTheme : darkTheme;
   if (!componentMounted) {
     return <div />;
   }
-
-  const GridLayout = styled.div`
-    height: 100vh;
-    display: grid;
-    grid-template-areas:
-      'nav nav nav'
-      'asideLeft main asideRight'
-      'footer footer footer';
-    /* grid-template-rows: auto auto 1fr;
-    grid-template-columns: auto auto 1fr; */
-    grid-template-rows: 1fr 9fr 1fr;
-
-    grid-template-columns: 1fr 6fr 1fr;
-    /* animation: resize 2000ms ease infinite alternate;
-
-    @keyframes resize {
-      to {
-        grid-template-columns: 1fr 2fr 1fr;
-      }
-    } */
-  `;
-
-  const Nav = styled.nav`
-    grid-area: nav;
-
-    /* position: sticky; */
-    top: 0;
-    z-index: 10;
-  `;
-  const AsideLeft = styled.aside`
-    grid-area: asideLeft;
-  `;
-  const AsideRight = styled.aside`
-    grid-area: asideRight;
-  `;
-  const Main = styled.main`
-    grid-area: main;
-  `;
-  const Footer = styled.footer`
-    grid-area: footer;
-    position: sticky;
-    bottom: 0;
-  `;
-
-  // const Text = styled.div`
-  //   padding-left: 7em;
-  //   transition: 0.5s all ease-out;
-  //   -webkit-font-smoothing: antialiased;
-  // `;
-
   return (
     <Router>
       <ThemeProvider theme={themeMode}>
-        <GlobalTheme open={open} />
+        <GlobalTheme />
         <GridLayout>
-          {/* <Border /> */}
+          <Border />
           <Nav>
-            <Menu open={open} theme={theme} />
+            <Navbar theme={theme} toggleTheme={themeToggler} />
           </Nav>
           <AsideLeft>
             <LeftInfo />
@@ -92,12 +36,10 @@ const App = () => {
           <Main>
             <Switch>
               <Route exact path='/'>
-                <div ref={node}>
-                  <Home open={open} />
-                </div>
+                <Home />
               </Route>
               <Route path='/about'>
-                <About open={open} />
+                <About theme={theme} />
               </Route>
               <Route path='/ideas'>
                 <Ideas />
@@ -109,9 +51,7 @@ const App = () => {
           <AsideRight>
             <RightInfo />
           </AsideRight>
-          <Footer>
-            <Toggle theme={theme} toggleTheme={themeToggler} />
-          </Footer>
+          <Footer></Footer>
         </GridLayout>
       </ThemeProvider>
     </Router>

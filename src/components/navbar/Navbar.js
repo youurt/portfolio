@@ -1,61 +1,34 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { FaBars, FaUnderline } from 'react-icons/fa';
-import { links, social } from './NavbarData';
-import NavbarStyles from './NavbarStyles';
+import React, { useState } from 'react';
+import { Toggle } from './../../components';
+import { Link } from 'react-router-dom';
+import { links } from './NavbarData';
+import { MenuLink, Nav, Menu, Hamburger } from './Navbar.styled';
 
-export const Navbar = () => {
-  const [showLinks, setShowLinks] = useState(false);
-  const linksContainerRef = useRef(null);
-  const linksRef = useRef(null);
-
-  const toggleLinks = () => {
-    setShowLinks(!showLinks);
-  };
-
-  useEffect(() => {
-    const linksHeight = linksRef.current.getBoundingClientRect().height;
-    if (showLinks) {
-      linksContainerRef.current.style.height = `${linksHeight}px`;
-    } else {
-      linksContainerRef.current.style.height = '0px';
-    }
-  }, [showLinks]);
-
+export const Navbar = ({ theme, toggleTheme }) => {
+  const [isOpen, setIsOpen] = useState(false);
   return (
-    <NavbarStyles>
-      <div className='nav-center'>
-        <div className='nav-header'>
-          <div className='logo'>
-            <FaUnderline />
-          </div>
+    <Nav>
+      <Toggle toggleTheme={toggleTheme} theme={theme} />
 
-          <button className='nav-toggle' onClick={toggleLinks}>
-            <FaBars />
-          </button>
-        </div>
-        <div className='links-container' ref={linksContainerRef}>
-          <ul className='links' ref={linksRef}>
-            {links.map((link) => {
-              const { id, url, text } = link;
-              return (
-                <li key={id}>
-                  <a href={url}>{text}</a>
-                </li>
-              );
-            })}
-          </ul>
-        </div>
-        <ul className='social-icons'>
-          {social.map((socialIcon) => {
-            const { id, url, icon } = socialIcon;
-            return (
-              <li key={id}>
-                <a href={url}>{icon}</a>
-              </li>
-            );
-          })}
-        </ul>
-      </div>
-    </NavbarStyles>
+      <Hamburger
+        onClick={() => setIsOpen(!isOpen)}
+        theme={theme}
+        isOpen={isOpen}
+      >
+        <div />
+        <div />
+        <div />
+      </Hamburger>
+      <Menu isOpen={isOpen}>
+        {links.map((link) => {
+          const { id, url, text } = link;
+          return (
+            <MenuLink key={id}>
+              <Link to={url}>{text}</Link>
+            </MenuLink>
+          );
+        })}
+      </Menu>
+    </Nav>
   );
 };

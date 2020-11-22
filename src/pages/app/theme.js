@@ -4,7 +4,6 @@ export const darkTheme = {
   primaryHover: 'purple',
   mobile: '576px',
   iconColor: 'red',
-  gradient: 'linear-gradient(#091236, #1E215D)',
 };
 
 export const lightTheme = {
@@ -13,5 +12,4 @@ export const lightTheme = {
   primaryHover: 'purple',
   mobile: '576px',
   iconColor: 'red',
-  gradient: 'linear-gradient(#39598A, #79D7ED)',
 };

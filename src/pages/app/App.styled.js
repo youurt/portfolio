@@ -1,6 +1,6 @@
-import { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 
-const GlobalTheme = createGlobalStyle`
+export const GlobalTheme = createGlobalStyle`
 
 
   *, *::after, *::before {
@@ -13,7 +13,7 @@ const GlobalTheme = createGlobalStyle`
   body {
     /* align-items: center; */
     background: ${({ theme }) => theme.primaryDark};
-    color: ${({ theme }) => theme.primaryLight};
+    /* color: ${({ theme }) => theme.primaryLight}; */
     /* display: flex; */
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     justify-content: center;
@@ -62,7 +62,40 @@ const GlobalTheme = createGlobalStyle`
   a {
     color: ${({ theme }) => theme.primaryHover};
     text-decoration: none;
+      &:hover {
+    color: red;
+  }
   }
 `;
 
-export default GlobalTheme;
+export const GridLayout = styled.div`
+  height: 100vh;
+  display: grid;
+  grid-template-areas:
+    'nav nav nav'
+    'asideLeft main asideRight'
+    'footer footer footer';
+  grid-template-rows: 1fr 9fr 1fr;
+
+  grid-template-columns: 1fr 3fr 1fr;
+`;
+
+export const Nav = styled.nav`
+  grid-area: nav;
+  top: 0;
+  z-index: 10;
+`;
+export const AsideLeft = styled.aside`
+  grid-area: asideLeft;
+`;
+export const AsideRight = styled.aside`
+  grid-area: asideRight;
+`;
+export const Main = styled.main`
+  grid-area: main;
+`;
+export const Footer = styled.footer`
+  grid-area: footer;
+  position: sticky;
+  bottom: 0;
+`;

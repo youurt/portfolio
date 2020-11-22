@@ -2,7 +2,7 @@ import React from 'react';
 import { func, string } from 'prop-types';
 import { Button } from './Toggler.styled';
 
-export const Toggle = ({ theme, toggleTheme, size = 50 }) => {
+export const Toggle = ({ theme, toggleTheme, size = 30 }) => {
   // return <Button onClick={toggleTheme}>Switch Theme</Button>;
   switch (theme) {
     case 'dark':
