@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const MenuLink = styled.li`
   padding: 3rem 2rem;
   :last-child {
-    margin-right: 13rem;
+    margin-right: 13.3rem;
   }
 
   @media (max-width: 768px) {
@@ -24,7 +24,7 @@ export const MenuLink = styled.li`
 
 export const Nav = styled.div`
   padding: 0 2.7rem;
-  padding-top: 1rem;
+  padding-top: 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;

@@ -8,8 +8,8 @@ export const Navbar = ({ theme, toggleTheme }) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <Nav>
-      <Toggle toggleTheme={toggleTheme} theme={theme} />
-
+      {/* <Toggle toggleTheme={toggleTheme} theme={theme} /> */}
+      <div></div>
       <Hamburger
         onClick={() => setIsOpen(!isOpen)}
         theme={theme}

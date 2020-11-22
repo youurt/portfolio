@@ -1,7 +1,13 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import { useDarkMode } from './../../hooks';
-import { Border, LeftInfo, RightInfo, Navbar } from './../../components/';
+import {
+  Border,
+  LeftInfo,
+  RightInfo,
+  Navbar,
+  Footer,
+} from './../../components/';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Home, About, Ideas, Work } from './../../pages';
 import {
@@ -11,7 +17,7 @@ import {
   AsideLeft,
   AsideRight,
   Main,
-  Footer,
+  FooterGrid,
 } from './App.styled';
 import { darkTheme, lightTheme } from './theme';
 
@@ -39,7 +45,7 @@ const App = () => {
                 <Home />
               </Route>
               <Route path='/about'>
-                <About theme={theme} />
+                <About />
               </Route>
               <Route path='/ideas'>
                 <Ideas />
@@ -51,7 +57,9 @@ const App = () => {
           <AsideRight>
             <RightInfo />
           </AsideRight>
-          <Footer></Footer>
+          <FooterGrid>
+            <Footer />
+          </FooterGrid>
         </GridLayout>
       </ThemeProvider>
     </Router>

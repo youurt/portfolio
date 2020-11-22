@@ -1,38 +1,23 @@
 import styled, { createGlobalStyle } from 'styled-components';
 
 export const GlobalTheme = createGlobalStyle`
-
-
   *, *::after, *::before {
     box-sizing: border-box;
-    
+    margin: 0;
+    padding: 0;
   }
-  
-
 
   body {
-    /* align-items: center; */
     background: ${({ theme }) => theme.primaryDark};
-    /* color: ${({ theme }) => theme.primaryLight}; */
-    /* display: flex; */
+    color: ${({ theme }) => theme.primaryLight};
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     justify-content: center;
     text-rendering: optimizeLegibility;
     transition: all 0.25s linear;
-
-
   }
   
-  /* main{
-
-    @media (max-width: 768px) {
-    filter: ${({ open }) => (open ? 'blur(5px)' : 'none')};
-    }
-  } */
-
-  
-
   p{
+    color: ${({ theme }) => theme.primaryHover};
     display: block;
     margin-block-start: 1em;
     margin-block-end: 1em;
@@ -40,6 +25,9 @@ export const GlobalTheme = createGlobalStyle`
     margin-inline-end: 0px;
   }
 
+  strong{
+    font-weight:600;
+  }
 
   li{
     list-style-type:none;
@@ -50,6 +38,7 @@ export const GlobalTheme = createGlobalStyle`
     text-align: center;
     text-transform: uppercase;
   }
+  
   img {
     border-radius: 5px;
     height: auto;
@@ -59,12 +48,14 @@ export const GlobalTheme = createGlobalStyle`
   small {
     display: block;
   }
+  
   a {
     color: ${({ theme }) => theme.primaryHover};
     text-decoration: none;
-      &:hover {
+    
+    &:hover {
     color: red;
-  }
+    }
   }
 `;
 
@@ -76,7 +67,6 @@ export const GridLayout = styled.div`
     'asideLeft main asideRight'
     'footer footer footer';
   grid-template-rows: 1fr 9fr 1fr;
-
   grid-template-columns: 1fr 3fr 1fr;
 `;
 
@@ -93,9 +83,16 @@ export const AsideRight = styled.aside`
 `;
 export const Main = styled.main`
   grid-area: main;
+  margin-bottom: 150px;
 `;
-export const Footer = styled.footer`
+export const FooterGrid = styled.footer`
   grid-area: footer;
-  position: sticky;
-  bottom: 0;
+  display: block;
+  /* border-top: 1px solid rgba(243, 228, 228, 0.2); */
+  color: white;
+  max-width: 60vw;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 2em;
+  padding-bottom: 6em;
 `;

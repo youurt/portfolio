@@ -4,7 +4,7 @@ const LeftInfoStyle = styled.div`
   width: 11.7rem;
   position: fixed;
   transform: rotate(90deg);
-  top: 3.2rem;
+  top: 4.5rem;
   left: -3.4rem;
   font-size: 1.5em;
   font-weight: 700;
@@ -18,7 +18,7 @@ const LeftInfoStyle = styled.div`
 
 const RightInfoStyle = styled.div`
   transform: rotate(90deg);
-  bottom: 13.9rem;
+  bottom: 15.2rem;
   right: -3.4rem;
   width: 11.7rem;
   position: fixed;
