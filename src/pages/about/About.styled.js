@@ -1,17 +1,5 @@
 import styled from 'styled-components';
 
-export const Border = styled.div`
-  background: radial-gradient(
-    circle,
-    rgb(209, 98, 166, 0.9) 25%,
-    rgb(238, 174, 202, 0.1) 50%
-  );
-
-  padding: 10px;
-  background-size: 2px 2px;
-  grid-column: 1 / span 2;
-`;
-
 export const BorderSmall = styled.div`
   background: radial-gradient(
     circle,
@@ -40,18 +28,6 @@ export const Grid = styled.div`
   }
 `;
 
-export const Item2 = styled.div`
-  display: block;
-  justify-content: center;
-  background: ${({ theme }) => theme.primaryDark};
-  grid-column: 1 / span 2;
-  padding: 40px 30px 10px 40px;
-
-  color: red;
-
-  border: 1px solid ${({ theme }) => theme.primaryLight};
-`;
-
 export const Item = styled.div`
   display: flex;
   flex-flow: wrap;
@@ -75,6 +51,10 @@ export const Item = styled.div`
     font-weight: 800;
     font-size: 3.4rem;
     cursor: pointer;
+  }
+
+  @media (max-width: 1068px) {
+    min-width: 300px;
   }
 `;
 

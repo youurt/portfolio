@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { links } from './NavbarData';
 import { MenuLink, Nav, Menu, Hamburger } from './Navbar.styled';
 
-export const Navbar = ({ theme, toggleTheme }) => {
+export const Navbar = ({ theme }) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <Nav>
