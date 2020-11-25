@@ -34,7 +34,7 @@ const App = () => {
         <GridLayout>
           <Border />
           <Nav>
-            <Navbar theme={theme} toggleTheme={themeToggler} />
+            <Navbar />
           </Nav>
           <AsideLeft>
             <LeftInfo />
@@ -58,7 +58,7 @@ const App = () => {
             <RightInfo />
           </AsideRight>
           <FooterGrid>
-            <Footer />
+            <Footer theme={theme} toggleTheme={themeToggler} />
           </FooterGrid>
         </GridLayout>
       </ThemeProvider>

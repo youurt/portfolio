@@ -2,9 +2,9 @@ import styled from 'styled-components';
 
 export const MenuLink = styled.li`
   padding: 3rem 2rem;
-  :last-child {
-    margin-right: 13.3rem;
-  }
+  /* :last-child {
+    margin-right: 18rem;
+  } */
 
   @media (max-width: 768px) {
     padding: 1rem;
@@ -37,9 +37,12 @@ export const Nav = styled.div`
 
 export const Menu = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  position: relative;
+  /* margin-left: 8rem; */
+  /* justify-content: space-between; */
+  /* align-items: center; */
+  /* position: relative; */
   @media (max-width: 768px) {
     overflow: hidden;
     flex-direction: column;
@@ -53,6 +56,7 @@ export const Hamburger = styled.div`
   display: none;
   flex-direction: column;
   cursor: pointer;
+  margin-top: 1rem;
 
   &:focus {
     outline: none;

@@ -7,19 +7,27 @@ import {
   LabelRight,
   Border,
   BorderSmall,
+  Categories,
+  Tag,
 } from './About.styled';
 import { data } from './AboutData';
+import { Link } from 'react-router-dom';
 
-export const About = ({ open, theme }) => {
-  const item2 = 'Item2';
-  const item = 'Item';
+export const About = ({ theme }) => {
   return (
-    <Container theme={theme} open={open}>
+    <Container theme={theme}>
       <Grid>
         <BorderSmall>
           <Item>
             <Label>Article</Label>
-            <a href='www.google.de'>Similar post to this!</a>
+            <a href='www.google.de'>
+              Similar post to this! Lorem, ipsum dolor.
+            </a>
+            <Categories>
+              <Tag>technology</Tag>
+              <Tag>design</Tag>
+              <Tag>coding</Tag>
+            </Categories>
             <LabelRight>heute</LabelRight>
           </Item>
         </BorderSmall>
@@ -28,6 +36,11 @@ export const About = ({ open, theme }) => {
           <Item>
             <Label>Article</Label>
             <a href='www.google.de'>Similar post to this!</a>
+            <Categories>
+              <Tag>technology</Tag>
+              <Tag>design</Tag>
+              <Tag>coding</Tag>
+            </Categories>
             <LabelRight>heute</LabelRight>
           </Item>
         </BorderSmall>
@@ -52,7 +65,6 @@ export const About = ({ open, theme }) => {
           <Item2>6</Item2>
         </Border>
       </Grid>
-      {/* </main> */}
     </Container>
   );
 };

@@ -9,7 +9,7 @@ export const GlobalTheme = createGlobalStyle`
 
   body {
     background: ${({ theme }) => theme.primaryDark};
-    color: ${({ theme }) => theme.primaryLight};
+
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     justify-content: center;
     text-rendering: optimizeLegibility;
@@ -33,7 +33,38 @@ export const GlobalTheme = createGlobalStyle`
     list-style-type:none;
   }
 
-  h1, h2, h3, h4 {
+
+  h1{
+    color: ${({ theme }) => theme.primaryHover};
+    font-size: 8rem;
+    /* line-height: 2.25em; */
+    display: block;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: 700;
+
+    @media (max-width: 768px) {
+    font-size: 4.4em;
+    }
+  }
+
+  h2{
+    color: ${({ theme }) => theme.primaryHover};
+    /* line-height: 1.25em; */
+    font-size: 2.8em;
+    font-weight: 700;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    /* display: block; */
+    /* margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px; */
+  } 
+  
+  h3, h4 {
     font-size: 2rem;
     text-align: center;
     text-transform: uppercase;
@@ -67,7 +98,7 @@ export const GridLayout = styled.div`
     'asideLeft main asideRight'
     'footer footer footer';
   grid-template-rows: 1fr 9fr 1fr;
-  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-columns: 1fr 2fr 1fr;
 `;
 
 export const Nav = styled.nav`
@@ -90,7 +121,7 @@ export const FooterGrid = styled.footer`
   display: block;
   /* border-top: 1px solid rgba(243, 228, 228, 0.2); */
   color: white;
-  max-width: 60vw;
+  max-width: 50vw;
   margin-left: auto;
   margin-right: auto;
   padding-top: 2em;

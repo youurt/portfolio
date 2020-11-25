@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Toggle } from './../../components';
+
 import { Link } from 'react-router-dom';
 import { links } from './NavbarData';
 import { MenuLink, Nav, Menu, Hamburger } from './Navbar.styled';
@@ -8,7 +8,6 @@ export const Navbar = ({ theme, toggleTheme }) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <Nav>
-      {/* <Toggle toggleTheme={toggleTheme} theme={theme} /> */}
       <div></div>
       <Hamburger
         onClick={() => setIsOpen(!isOpen)}

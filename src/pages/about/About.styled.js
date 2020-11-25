@@ -3,36 +3,29 @@ import styled from 'styled-components';
 export const Border = styled.div`
   background: radial-gradient(
     circle,
-    rgba(2, 0, 36, 0.25) 0%,
-    rgba(238, 187, 187, 0.25) 45%,
-    rgba(0, 212, 255, 0.25) 100%
+    rgb(209, 98, 166, 0.9) 25%,
+    rgb(238, 174, 202, 0.1) 50%
   );
 
   padding: 10px;
-  background-size: 4px 4px;
+  background-size: 2px 2px;
   grid-column: 1 / span 2;
-  /* padding: 40px 30px 10px 40px; */
-  display: block;
-  justify-content: center;
 `;
 
 export const BorderSmall = styled.div`
   background: radial-gradient(
     circle,
-    rgba(2, 0, 36, 0.25) 0%,
-    rgba(238, 187, 187, 0.25) 45%,
-    rgba(0, 212, 255, 0.25) 100%
+    rgb(209, 98, 166, 0.9) 25%,
+    rgb(238, 174, 202, 0.1) 50%
   );
 
   padding: 10px;
-  background-size: 4px 4px;
+  background-size: 2px 2px;
+  /* position: relative; */
 `;
 
 export const Container = styled.div`
   display: block;
-
-  margin-top: 5em;
-  margin-bottom: 5em;
 `;
 
 export const Grid = styled.div`
@@ -56,18 +49,27 @@ export const Item2 = styled.div`
 
   color: red;
 
-  border: 6px solid purple;
+  border: 1px solid ${({ theme }) => theme.primaryLight};
 `;
 
 export const Item = styled.div`
-  display: block;
-  justify-content: center;
+  display: flex;
+  flex-flow: wrap;
+
+  align-items: center;
+  /* justify-content: center; */
   background: ${({ theme }) => theme.primaryDark};
   padding: 40px 30px 10px 40px;
 
+  /* min-height: 450px; */
+
+  min-width: 500px;
+  min-height: 400px;
+  /* max-height: 450px;
+  min-height: 450px; */
   color: red;
 
-  border: 6px solid purple;
+  border: 1px solid ${({ theme }) => theme.primaryLight};
 
   a {
     font-weight: 800;
@@ -92,4 +94,15 @@ export const LabelRight = styled.p`
   font-weight: 600;
   text-transform: uppercase;
   margin-bottom: 10px;
+`;
+
+export const Categories = styled.p`
+  text-transform: uppercase;
+  font-weight: 600;
+  opacity: 0.75;
+  margin-top: 0.5em;
+`;
+
+export const Tag = styled.span`
+  margin-right: 1em;
 `;

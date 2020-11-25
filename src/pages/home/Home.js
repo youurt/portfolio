@@ -17,12 +17,41 @@ export const Home = ({ open }) => {
   }, [index]);
 
   const TEXTS_amet = ['Forest', 'hi', 'Tree', 'Color'];
+  const HELLO = [
+    'nǐ hǎo',
+    'hola',
+    'hello',
+    'namaste',
+    'olá',
+    'hyālō',
+    'privet',
+    'guten tag',
+    'nggoleki',
+    'nóng hō',
+    'bonjour',
+    'merhaba',
+    'ciao',
+    'cześć’',
+  ];
 
   const today = dateTime.toLocaleDateString('de', { weekday: 'long' });
   return (
     <>
+      <h1>
+        <SpanText>
+          <TextTransition
+            text={HELLO[index % HELLO.length]}
+            springConfig={presets.wobbly}
+            inline={true}
+          ></TextTransition>
+        </SpanText>
+      </h1>
+
+      <h2>
+        I'm a multidisciplinary developer and designer, with a strong interest
+        in data science, AI, ethics and accessibility.
+      </h2>
       <MainText open={open}>
-        {/* <main> */}
         Lorem ipsum dolor sit {''}
         <SpanText>
           <TextTransition
@@ -46,7 +75,6 @@ export const Home = ({ open }) => {
         aperiam. Aperiam ipsa dicta doloremque recusandae officia nemo iusto
         laborum, consequatur corrupti iure.
         <SpanText>{today}</SpanText>
-        {/* </main> */}
       </MainText>
     </>
   );

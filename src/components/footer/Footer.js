@@ -1,4 +1,5 @@
 import React from 'react';
+import { Toggle } from './../../components';
 import {
   FooterGrid,
   FooterFirst,
@@ -7,7 +8,7 @@ import {
   Big,
 } from './Footer.styled';
 
-export const Footer = () => {
+export const Footer = ({ theme, toggleTheme }) => {
   return (
     <FooterGrid>
       <FooterFirst>
@@ -18,9 +19,10 @@ export const Footer = () => {
       </FooterFirst>
       <FooterCenter>
         <p>
-          <strong>Pronouns are</strong>
+          <strong>Mood:</strong>
         </p>
-        <Big>They/them</Big>
+        <Toggle toggleTheme={toggleTheme} theme={theme} />
+        <Big>Disco/Work</Big>
       </FooterCenter>
       <FooterLast>
         <p>
