@@ -9,7 +9,7 @@ import {
   Footer,
 } from './../../components/';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { Home, About, Ideas, Work } from './../../pages';
+import { Home, About, Ideas, Work, Post } from './../../pages';
 import {
   GlobalTheme,
   GridLayout,
@@ -44,14 +44,18 @@ const App = () => {
               <Route exact path='/'>
                 <Home />
               </Route>
-              <Route path='/about'>
-                <About />
-              </Route>
               <Route path='/ideas'>
                 <Ideas />
               </Route>
-              <Route path='/work'></Route>
-              <Work />
+              <Route path='/about'>
+                <About />
+              </Route>
+              <Route path='/work'>
+                <Work />
+              </Route>
+              <Route path='/posts/:id/:slug'>
+                <Post />
+              </Route>
             </Switch>
           </Main>
           <AsideRight>

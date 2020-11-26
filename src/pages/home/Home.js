@@ -3,7 +3,7 @@ import TextTransition, { presets } from 'react-text-transition';
 import { bool } from 'prop-types';
 import { MainText, SpanText } from './Home.styled';
 
-export const Home = ({ open }) => {
+export const Home = () => {
   const [index, setIndex] = useState(0);
   const [dateTime, setDateTime] = useState(new Date());
 
@@ -51,7 +51,7 @@ export const Home = ({ open }) => {
         I'm a multidisciplinary developer and designer, with a strong interest
         in data science, AI, ethics and accessibility.
       </h2>
-      <MainText open={open}>
+      <MainText>
         Lorem ipsum dolor sit {''}
         <SpanText>
           <TextTransition
@@ -78,8 +78,4 @@ export const Home = ({ open }) => {
       </MainText>
     </>
   );
-};
-
-Home.propTypes = {
-  open: bool.isRequired,
 };
