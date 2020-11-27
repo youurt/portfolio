@@ -20,11 +20,6 @@ export const links = [
   },
   {
     id: 3,
-    url: '/work',
-    text: 'work',
-  },
-  {
-    id: 4,
     url: '/about',
     text: 'about',
   },

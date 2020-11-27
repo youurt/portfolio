@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import {
   Header,
@@ -13,11 +13,11 @@ import { PageTrans } from './../../utils/utils';
 
 export const Post = () => {
   const { id } = useParams();
-  console.log(id);
   const filteredData = data.filter((item) => item.id === id);
-  console.log(filteredData);
   const { title, date } = filteredData[0];
-  console.log(title);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <Motion initial='out' animate='in' exit='out' variants={PageTrans}>
