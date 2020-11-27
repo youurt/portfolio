@@ -14,6 +14,7 @@ const LeftInfoStyle = styled.div`
   padding-bottom: 1.6em;
   margin-block-start: 6em;
   margin-block-end: 1em;
+  z-index: 30;
 `;
 
 const RightInfoStyle = styled.div`

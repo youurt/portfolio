@@ -5,7 +5,7 @@ export const string_to_slug = (str) => {
   // remove accents, swap ñ for n, etc
   const from = 'àáäâèéëêìíïîòóöôùúüûñç·/_,:;';
   const to = 'aaaaeeeeiiiioooouuuunc------';
-  for (var i = 0, l = from.length; i < l; i++) {
+  for (let i = 0, l = from.length; i < l; i++) {
     str = str.replace(new RegExp(from.charAt(i), 'g'), to.charAt(i));
   }
 
@@ -15,4 +15,18 @@ export const string_to_slug = (str) => {
     .replace(/-+/g, '-'); // collapse dashes
 
   return str;
+};
+
+export const CardVariants = {
+  beforeHover: {},
+  onHover: {
+    scale: 1.1,
+  },
+};
+
+export const ItemVariants = {
+  beforeHover: {},
+  onHover: {
+    scale: 1.2,
+  },
 };

@@ -83,6 +83,22 @@ export const GlobalTheme = createGlobalStyle`
     color: red;
     }
   }
+
+  button {
+    appearance: button;
+    /* -webkit-writing-mode: horizontal-tb !important; */
+    -writing-mode: horizontal-tb !important;
+    word-spacing: normal;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: center;
+    align-items: flex-start;
+    font: 14px;
+    /* border-width: 2px;
+    border-style: outset;
+    border-image: initial; */
+  }
 `;
 
 export const GridLayout = styled.div`

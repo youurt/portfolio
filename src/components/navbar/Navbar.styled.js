@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
-export const MenuLink = styled.li`
+export const MenuLink = styled(motion.li)`
   padding: 3rem 2rem;
   /* :last-child {
     margin-right: 18rem;

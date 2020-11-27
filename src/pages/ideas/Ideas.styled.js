@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 export const BorderSmall = styled.div`
   background: radial-gradient(
@@ -28,10 +29,10 @@ export const Grid = styled.div`
   }
 `;
 
-export const Item = styled.div`
+export const Item = styled(motion.div)`
   display: flex;
   flex-flow: wrap;
-
+  z-index: 20;
   align-items: center;
   /* justify-content: center; */
   background: ${({ theme }) => theme.primaryDark};

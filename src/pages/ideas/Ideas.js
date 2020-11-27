@@ -10,7 +10,7 @@ import {
 } from './Ideas.styled';
 import { data } from './IdeasData';
 import { Link } from 'react-router-dom';
-import { string_to_slug } from './../../utils/stringToSlug';
+import { string_to_slug, CardVariants } from './../../utils/utils';
 
 export const Ideas = ({ theme }) => {
   return (
@@ -19,9 +19,14 @@ export const Ideas = ({ theme }) => {
         {data.map((post, index) => {
           const { id, title, date, tags, postCategory } = post;
           const slug = string_to_slug(title);
+
           return (
             <BorderSmall key={id}>
-              <Item>
+              <Item
+                variants={CardVariants}
+                initial='beforeHover'
+                whileHover='onHover'
+              >
                 <Label>{postCategory}</Label>
 
                 <Link to={`/posts/${id}/${slug}`}>{title}</Link>
