@@ -41,3 +41,21 @@ export const PageTrans = {
     y: '-10%',
   },
 };
+
+export const TEXTS_amet = ['Forest', 'hi', 'Tree', 'Color'];
+export const HELLO = [
+  'nǐ hǎo',
+  'hola',
+  'hello',
+  'namaste',
+  'olá',
+  'hyālō',
+  'privet',
+  'guten tag',
+  'nggoleki',
+  'nóng hō',
+  'bonjour',
+  'merhaba',
+  'ciao',
+  'cześć’',
+];

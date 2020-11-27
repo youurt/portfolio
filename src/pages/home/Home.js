@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import TextTransition, { presets } from 'react-text-transition';
-import { bool } from 'prop-types';
 import { MainText, SpanText, Motion } from './Home.styled';
-import { PageTrans } from './../../utils/utils';
+import { PageTrans, TEXTS_amet, HELLO } from './../../utils/utils';
 
 export const Home = () => {
   const [index, setIndex] = useState(0);
@@ -16,24 +15,6 @@ export const Home = () => {
       clearInterval(intervalId);
     };
   }, [index]);
-
-  const TEXTS_amet = ['Forest', 'hi', 'Tree', 'Color'];
-  const HELLO = [
-    'nǐ hǎo',
-    'hola',
-    'hello',
-    'namaste',
-    'olá',
-    'hyālō',
-    'privet',
-    'guten tag',
-    'nggoleki',
-    'nóng hō',
-    'bonjour',
-    'merhaba',
-    'ciao',
-    'cześć’',
-  ];
 
   const today = dateTime.toLocaleDateString('de', { weekday: 'long' });
   return (
