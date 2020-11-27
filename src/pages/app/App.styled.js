@@ -9,8 +9,9 @@ export const GlobalTheme = createGlobalStyle`
 
   body {
     background: ${({ theme }) => theme.primaryDark};
+    font-family: 'Open Sans', sans-serif;
 
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; */
     justify-content: center;
     text-rendering: optimizeLegibility;
     transition: all 0.25s linear;
