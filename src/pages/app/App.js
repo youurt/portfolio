@@ -9,7 +9,7 @@ import {
   Footer,
 } from './../../components/';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { Home, About, Ideas, Post } from './../../pages';
+import { Home, Contact, Ideas, Post } from './../../pages';
 import {
   GlobalTheme,
   GridLayout,
@@ -46,7 +46,7 @@ const App = () => {
               <Switch>
                 <Route exact path='/' component={Home} />
                 <Route path='/ideas' component={Ideas} />
-                <Route path='/about' component={About} />
+                <Route path='/contact' component={Contact} />
                 <Route path='/posts/:id/:slug' component={Post} />
               </Switch>
             </AnimatePresence>
