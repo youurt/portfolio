@@ -30,3 +30,14 @@ export const ItemVariants = {
     scale: 1.2,
   },
 };
+
+export const PageTrans = {
+  in: {
+    opacity: 1,
+    y: 0,
+  },
+  out: {
+    opacity: 0,
+    y: '-10%',
+  },
+};

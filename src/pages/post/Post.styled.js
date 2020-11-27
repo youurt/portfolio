@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 export const Header = styled.h1`
   font-weight: 700;
@@ -22,3 +23,5 @@ export const PostedOn = styled.p`
   text-transform: uppercase;
   margin-bottom: 1.5em;
 `;
+
+export const Motion = styled(motion.div)``;

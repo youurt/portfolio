@@ -1,4 +1,7 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
+
+const Motion = styled(motion.div)``;
 
 const MainText = styled.div`
   font-size: 2.8em;
@@ -14,4 +17,4 @@ const SpanText = styled.span`
   color: red;
 `;
 
-export { MainText, SpanText };
+export { Motion, MainText, SpanText };

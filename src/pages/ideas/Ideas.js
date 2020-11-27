@@ -10,18 +10,24 @@ import {
 } from './Ideas.styled';
 import { data } from './IdeasData';
 import { Link } from 'react-router-dom';
-import { string_to_slug, CardVariants } from './../../utils/utils';
+import { string_to_slug, CardVariants, PageTrans } from './../../utils/utils';
 
 export const Ideas = ({ theme }) => {
   return (
-    <Container theme={theme}>
+    <Container
+      initial='out'
+      animate='in'
+      exit='out'
+      variants={PageTrans}
+      theme={theme}
+    >
       <Grid>
         {data.map((post, index) => {
           const { id, title, date, tags, postCategory } = post;
           const slug = string_to_slug(title);
 
           return (
-            <BorderSmall key={id}>
+            <BorderSmall>
               <Item
                 variants={CardVariants}
                 initial='beforeHover'

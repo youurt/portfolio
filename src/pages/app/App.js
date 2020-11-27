@@ -20,10 +20,12 @@ import {
   FooterGrid,
 } from './App.styled';
 import { darkTheme, lightTheme } from './theme';
+import { AnimatePresence } from 'framer-motion';
 
 const App = () => {
   const [theme, themeToggler, componentMounted] = useDarkMode();
   const themeMode = theme === 'light' ? lightTheme : darkTheme;
+
   if (!componentMounted) {
     return <div />;
   }
@@ -40,23 +42,15 @@ const App = () => {
             <LeftInfo />
           </AsideLeft>
           <Main>
-            <Switch>
-              <Route exact path='/'>
-                <Home />
-              </Route>
-              <Route path='/ideas'>
-                <Ideas />
-              </Route>
-              <Route path='/about'>
-                <About />
-              </Route>
-              <Route path='/work'>
-                <Work />
-              </Route>
-              <Route path='/posts/:id/:slug'>
-                <Post />
-              </Route>
-            </Switch>
+            <AnimatePresence exitBeforeEnter>
+              <Switch>
+                <Route exact path='/' component={Home} />
+                <Route path='/ideas' component={Ideas} />
+                <Route path='/about' component={About} />
+                <Route path='/work' component={Work} />
+                <Route path='/posts/:id/:slug' component={Post} />
+              </Switch>
+            </AnimatePresence>
           </Main>
           <AsideRight>
             <RightInfo />

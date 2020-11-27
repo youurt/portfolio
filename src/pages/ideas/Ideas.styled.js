@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
-export const BorderSmall = styled.div`
+export const BorderSmall = styled(motion.div)`
   background: radial-gradient(
     circle,
     rgb(209, 98, 166, 0.9) 25%,
@@ -13,7 +13,7 @@ export const BorderSmall = styled.div`
   /* position: relative; */
 `;
 
-export const Container = styled.div`
+export const Container = styled(motion.div)`
   display: block;
 `;
 

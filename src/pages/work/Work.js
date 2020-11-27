@@ -10,7 +10,6 @@ import {
   TagInfo,
   Date,
 } from './Work.styled';
-import { motion } from 'framer-motion';
 
 export const Work = () => {
   return (
