@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import TextTransition, { presets } from 'react-text-transition';
 import { MainText, SpanText, Motion, Header } from './About.styled';
-import { PageTrans, TEXT_ALT, HELLO, INTERESTS } from './../../utils/utils';
+import { PageTrans, HELLO, INTERESTS } from './../../utils/utils';
 
 export const About = () => {
   const [index, setIndex] = useState(0);
@@ -47,15 +47,7 @@ export const About = () => {
           <br />
           <br />
           On this page I want to share my ideas and my code. I hope you enjoy
-          it! Stay bold & have a <br />
-          <SpanText>
-            <TextTransition
-              text={TEXT_ALT[index % TEXT_ALT.length]}
-              springConfig={presets.wobbly}
-              inline={true}
-            ></TextTransition>
-          </SpanText>{' '}
-          {today}!
+          it! Stay bold & have a nice {today}!
         </MainText>
       </Motion>
     </>

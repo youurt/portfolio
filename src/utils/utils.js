@@ -42,15 +42,6 @@ export const PageTrans = {
   },
 };
 
-export const TEXT_ALT = [
-  'top-notch',
-  'slick',
-  'exceptional',
-  'ultimate',
-  'divine',
-  'lovely',
-  'super-duper',
-];
 export const HELLO = [
   'nǐ hǎo',
   'hola',

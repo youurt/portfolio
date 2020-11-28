@@ -15,6 +15,11 @@ const LeftInfoStyle = styled.div`
   margin-block-start: 6em;
   margin-block-end: 1em;
   z-index: 30;
+  @media (max-width: 768px) {
+    left: -4.4rem;
+    font-size: 1em;
+    font-weight: 500;
+  }
 `;
 
 const RightInfoStyle = styled.div`
@@ -31,8 +36,12 @@ const RightInfoStyle = styled.div`
   padding-top: 1.6em;
   margin-block-start: 1em;
   margin-block-end: 1em;
-
   text-decoration: none;
+  @media (max-width: 768px) {
+    right: -4.4rem;
+    font-size: 1em;
+    font-weight: 500;
+  }
 `;
 const SpanText = styled.span`
   color: var(--secondaryFont);

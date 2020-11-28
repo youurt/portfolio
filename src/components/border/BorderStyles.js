@@ -7,7 +7,7 @@ const Left = styled.div`
   left: 0;
   top: 0;
   bottom: 0;
-  width: 20px;
+  width: 10px;
 `;
 const Right = styled.div`
   z-index: 100;
@@ -16,7 +16,7 @@ const Right = styled.div`
   right: 0;
   top: 0;
   bottom: 0;
-  width: 20px;
+  width: 10px;
 `;
 const Top = styled.div`
   z-index: 100;
@@ -25,7 +25,7 @@ const Top = styled.div`
   top: 0;
   left: 0;
   right: 0;
-  height: 20px;
+  height: 10px;
 `;
 const Bottom = styled.div`
   z-index: 100;
@@ -34,7 +34,7 @@ const Bottom = styled.div`
   bottom: 0;
   left: 0;
   right: 0;
-  height: 20px;
+  height: 10px;
 `;
 
 export { Left, Right, Top, Bottom };
