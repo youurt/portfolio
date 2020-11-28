@@ -9,7 +9,7 @@ import {
   Footer,
 } from './../../components/';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { Home, Contact, Ideas, Post } from './../../pages';
+import { About, Contact, Ideas, Post } from './../../pages';
 import {
   GlobalTheme,
   GridLayout,
@@ -44,7 +44,7 @@ const App = () => {
           <Main>
             <AnimatePresence exitBeforeEnter>
               <Switch>
-                <Route exact path='/' component={Home} />
+                <Route exact path='/' component={About} />
                 <Route path='/ideas' component={Ideas} />
                 <Route path='/contact' component={Contact} />
                 <Route path='/posts/:id/:slug' component={Post} />

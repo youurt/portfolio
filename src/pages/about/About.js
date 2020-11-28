@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import TextTransition, { presets } from 'react-text-transition';
-import { MainText, SpanText, Motion } from './Home.styled';
+import { MainText, SpanText, Motion } from './About.styled';
 import { PageTrans, TEXTS_amet, HELLO } from './../../utils/utils';
 
-export const Home = () => {
+export const About = () => {
   const [index, setIndex] = useState(0);
   const [dateTime, setDateTime] = useState(new Date());
 
