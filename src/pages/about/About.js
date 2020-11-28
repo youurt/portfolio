@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import TextTransition, { presets } from 'react-text-transition';
-import { MainText, SpanText, Motion } from './About.styled';
+import { MainText, SpanText, Motion, Header } from './About.styled';
 import { PageTrans, TEXT_ALT, HELLO, INTERESTS } from './../../utils/utils';
 
 export const About = () => {
@@ -21,13 +21,13 @@ export const About = () => {
     <>
       <Motion initial='out' animate='in' exit='out' variants={PageTrans}>
         <SpanText>
-          <h1>
+          <Header>
             <TextTransition
               text={HELLO[index % HELLO.length]}
               springConfig={presets.wobbly}
               inline={true}
             ></TextTransition>
-          </h1>
+          </Header>
         </SpanText>
 
         <MainText>
