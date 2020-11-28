@@ -1,15 +1,11 @@
 export const darkTheme = {
   primaryDark: '#0D0C1D',
-  primaryLight: 'purple',
-  primaryHover: 'purple',
+  primaryLight: '#64327A',
   mobile: '576px',
-  iconColor: 'red',
 };
 
 export const lightTheme = {
   primaryDark: '#F0FFF0',
-  primaryLight: 'red',
-  primaryHover: 'purple',
+  primaryLight: '#FA5163',
   mobile: '576px',
-  iconColor: 'red',
 };

@@ -1,6 +1,11 @@
 import styled, { createGlobalStyle } from 'styled-components';
 
 export const GlobalTheme = createGlobalStyle`
+  :root {
+  --primaryFont: #64327A;
+  --secondaryFont: #FA5163;
+}
+  
   *, *::after, *::before {
     box-sizing: border-box;
     margin: 0;
@@ -18,7 +23,8 @@ export const GlobalTheme = createGlobalStyle`
   }
   
   p{
-    color: ${({ theme }) => theme.primaryHover};
+    color: var(--primaryFont);
+    /* color: var(--primaryLight);; */
     display: block;
     margin-block-start: 1em;
     margin-block-end: 1em;
@@ -36,7 +42,7 @@ export const GlobalTheme = createGlobalStyle`
 
 
   h1{
-    color: ${({ theme }) => theme.primaryHover};
+    color: var(--primaryFont);
     font-size: 8rem;
     /* line-height: 2.25em; */
     display: block;
@@ -52,7 +58,7 @@ export const GlobalTheme = createGlobalStyle`
   }
 
   h2{
-    color: ${({ theme }) => theme.primaryHover};
+    color: var(--primaryFont);
     font-size: 2.8em;
     font-weight: 700;
     margin-block-start: 0.67em;
@@ -77,11 +83,12 @@ export const GlobalTheme = createGlobalStyle`
   }
   
   a {
-    color: ${({ theme }) => theme.primaryHover};
+    /* color: ${({ theme }) => theme.primaryHover}; */
+    color: var(--primaryFont);
     text-decoration: none;
     
     &:hover {
-    color: red;
+    color: var(--secondaryFont);
     }
   }
 
@@ -96,9 +103,7 @@ export const GlobalTheme = createGlobalStyle`
     text-align: center;
     align-items: flex-start;
     font: 14px;
-    /* border-width: 2px;
-    border-style: outset;
-    border-image: initial; */
+
   }
 `;
 
@@ -131,7 +136,6 @@ export const Main = styled.main`
 export const FooterGrid = styled.footer`
   grid-area: footer;
   display: block;
-  /* border-top: 1px solid rgba(243, 228, 228, 0.2); */
   color: white;
   max-width: 50vw;
   margin-left: auto;

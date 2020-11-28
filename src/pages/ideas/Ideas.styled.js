@@ -44,7 +44,7 @@ export const Item = styled(motion.div)`
   min-height: 400px;
   /* max-height: 450px;
   min-height: 450px; */
-  color: red;
+  color: var(--secondaryFont);
 
   border: 1px solid ${({ theme }) => theme.primaryLight};
 

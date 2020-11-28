@@ -8,11 +8,11 @@ export const MainText = styled.div`
   font-weight: 700;
   /* line-height: 1.1; */
 
-  color: purple;
+  color: var(--primaryFont);
   @media (max-width: 768px) {
     font-size: 1.8em;
   }
 `;
 export const SpanText = styled.span`
-  color: red;
+  color: var(--secondaryFont);
 `;

@@ -8,7 +8,7 @@ const LeftInfoStyle = styled.div`
   left: -3.4rem;
   font-size: 1.5em;
   font-weight: 700;
-  color: purple;
+  color: var(--primaryFont);
   display: flex;
   text-align: center;
   padding-bottom: 1.6em;
@@ -35,7 +35,7 @@ const RightInfoStyle = styled.div`
   text-decoration: none;
 `;
 const SpanText = styled.span`
-  color: red;
+  color: var(--secondaryFont);
 `;
 
 export { LeftInfoStyle, RightInfoStyle, SpanText };

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const Left = styled.div`
   z-index: 100;
-  background: purple;
+  background: var(--primaryFont);
   position: fixed;
   left: 0;
   top: 0;
@@ -11,7 +11,7 @@ const Left = styled.div`
 `;
 const Right = styled.div`
   z-index: 100;
-  background: purple;
+  background: var(--primaryFont);
   position: fixed;
   right: 0;
   top: 0;
@@ -20,7 +20,7 @@ const Right = styled.div`
 `;
 const Top = styled.div`
   z-index: 100;
-  background: purple;
+  background: var(--primaryFont);
   position: fixed;
   top: 0;
   left: 0;
@@ -29,7 +29,7 @@ const Top = styled.div`
 `;
 const Bottom = styled.div`
   z-index: 100;
-  background: purple;
+  background: var(--primaryFont);
   position: fixed;
   bottom: 0;
   left: 0;

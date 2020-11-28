@@ -12,5 +12,5 @@ export const Text = styled.div`
   font-size: 3rem;
   font-weight: 600px;
   text-align: center;
-  color: purple;
+  color: var(--primaryFont);
 `;

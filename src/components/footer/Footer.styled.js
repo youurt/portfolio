@@ -31,5 +31,5 @@ export const Big = styled.div`
   font-size: 2em;
   text-transform: uppercase;
   font-weight: 800;
-  color: red;
+  color: var(--secondaryFont);
 `;

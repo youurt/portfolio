@@ -68,7 +68,8 @@ export const Hamburger = styled.div`
     width: 25px;
     border-radius: 5px;
     margin-bottom: 4px;
-    background: ${({ theme }) => (theme === 'light' ? 'purple' : 'red')};
+    background: ${({ theme }) =>
+      theme === 'light' ? 'var(--primaryFont)' : 'var(--secondaryFont)'};
     border-radius: 10px;
     transition: all 0.3s linear;
     position: relative;
