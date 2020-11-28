@@ -7,10 +7,8 @@ export const BorderSmall = styled(motion.div)`
     rgb(209, 98, 166, 0.9) 25%,
     rgb(238, 174, 202, 0.1) 50%
   );
-
   padding: 10px;
   background-size: 2px 2px;
-  /* position: relative; */
 `;
 
 export const Container = styled(motion.div)`
@@ -34,18 +32,11 @@ export const Item = styled(motion.div)`
   flex-flow: wrap;
   z-index: 20;
   align-items: center;
-  /* justify-content: center; */
   background: ${({ theme }) => theme.primaryDark};
   padding: 40px 30px 10px 40px;
-
-  /* min-height: 450px; */
-
   min-width: 500px;
   min-height: 400px;
-  /* max-height: 450px;
-  min-height: 450px; */
   color: var(--secondaryFont);
-
   border: 1px solid ${({ theme }) => theme.primaryLight};
 
   a {
