@@ -17,3 +17,7 @@ export const MainText = styled.div`
 export const SpanText = styled.span`
   color: var(--secondaryFont);
 `;
+
+export const Header = styled.h1`
+  font-size: 8rem;
+`;

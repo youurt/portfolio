@@ -20,7 +20,7 @@ export const About = () => {
   return (
     <>
       <Motion initial='out' animate='in' exit='out' variants={PageTrans}>
-        <h1>
+        <Header>
           <SpanText>
             <TextTransition
               text={HELLO[index % HELLO.length]}
@@ -28,7 +28,7 @@ export const About = () => {
               inline={true}
             ></TextTransition>
           </SpanText>
-        </h1>
+        </Header>
 
         <MainText>
           My name is Uğur and I'm a multidisciplinary developer and designer,
