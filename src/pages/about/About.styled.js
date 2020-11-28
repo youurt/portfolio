@@ -20,4 +20,7 @@ export const SpanText = styled.span`
 
 export const Header = styled.h1`
   font-size: 8rem;
+  @media (max-width: 768px) {
+    font-size: 2.8em;
+  }
 `;

@@ -52,10 +52,9 @@ export const GlobalTheme = createGlobalStyle`
     margin-inline-end: 0px;
     font-weight: 700;
 
-  @media (max-width: 768px) {
-    font-size: 2.8em;
-  }
-  }
+    @media (max-width: 768px) {
+      font-size: 2.8em;
+    }
   }
 
   h2{
