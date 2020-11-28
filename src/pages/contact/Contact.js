@@ -7,15 +7,14 @@ export const Contact = () => {
     <>
       <Motion initial='out' animate='in' exit='out' variants={PageTrans}>
         <Header>CONTACT ME</Header>
-        <Text>I'm available for freelance work.</Text>
-        <Text>Drop me a line if you fancy a chat.</Text>
+        <Text>I'm available for work.</Text>
         <Border>
           <Item
             variants={CardVariants}
             initial='beforeHover'
             whileHover='onHover'
           >
-            <a href='mailto:info@ugurtigu.com'>info@ugurtigu.com</a>
+            <a href='#'>Curriculum Vitae</a>
           </Item>
         </Border>
       </Motion>

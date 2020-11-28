@@ -42,7 +42,15 @@ export const PageTrans = {
   },
 };
 
-export const TEXTS_amet = ['Forest', 'hi', 'Tree', 'Color'];
+export const TEXT_ALT = [
+  'top-notch',
+  'slick',
+  'exceptional',
+  'ultimate',
+  'divine',
+  'lovely',
+  'super-duper',
+];
 export const HELLO = [
   'nǐ hǎo',
   'hola',
@@ -58,4 +66,13 @@ export const HELLO = [
   'merhaba',
   'ciao',
   'cześć’',
+];
+export const INTERESTS = [
+  'Python',
+  'React',
+  'Frontend',
+  'TensorFlow.js',
+  'CSS',
+  'Data',
+  'Node.js',
 ];

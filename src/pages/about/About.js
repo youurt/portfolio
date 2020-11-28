@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import TextTransition, { presets } from 'react-text-transition';
 import { MainText, SpanText, Motion } from './About.styled';
-import { PageTrans, TEXTS_amet, HELLO } from './../../utils/utils';
+import { PageTrans, TEXT_ALT, HELLO, INTERESTS } from './../../utils/utils';
 
 export const About = () => {
   const [index, setIndex] = useState(0);
@@ -16,7 +16,7 @@ export const About = () => {
     };
   }, [index]);
 
-  const today = dateTime.toLocaleDateString('de', { weekday: 'long' });
+  const today = dateTime.toLocaleDateString('en', { weekday: 'long' });
   return (
     <>
       <Motion initial='out' animate='in' exit='out' variants={PageTrans}>
@@ -30,35 +30,32 @@ export const About = () => {
           </SpanText>
         </h1>
 
-        <h2>
-          I'm a multidisciplinary developer and designer, with a strong interest
-          in data science, AI, ethics and accessibility.
-        </h2>
         <MainText>
-          Lorem ipsum dolor sit {''}
+          My name is Uğur and I'm a multidisciplinary developer and designer,
+          with a strong interest in{' '}
           <SpanText>
             <TextTransition
-              text={TEXTS_amet[index % TEXTS_amet.length]}
+              text={INTERESTS[index % INTERESTS.length]}
+              springConfig={presets.wobbly}
+              inline={true}
+            ></TextTransition>
+          </SpanText>
+          . Currently living in Aachen, Germany.
+          <br />
+          <br />I have more than 4 years of experience as a developer & love
+          working within full-stack development, specially in front-end.
+          <br />
+          <br />
+          On this page I want to share my ideas and my code. I hope you enjoy
+          it! Stay bold & have a <br />
+          <SpanText>
+            <TextTransition
+              text={TEXT_ALT[index % TEXT_ALT.length]}
               springConfig={presets.wobbly}
               inline={true}
             ></TextTransition>
           </SpanText>{' '}
-          consectetur adipisicing elit. Molestiae repudiandae architecto qui
-          adipisci in officiis, aperiam sequi atque perferendis eos, autem
-          maiores nisi saepe quisquam hic odio consectetur nobis veritatis quasi
-          explicabo Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-          Quo deleniti, corporis maiores illo quis voluptate nisi, non porro
-          reiciendis nostrum ea ex nam incidunt corrupti facere id eos
-          praesentium quisquam quasi ut dicta neque deserunt commodi quibusdam.
-          Sequi asperiores sunt officiis cupiditate molestias eius fuga
-          perferendis fugiat dolor, porro dignissimos! Lorem, ipsum dolor sit
-          amet consectetur adipisicing elit. Molestiae aliquid quae, corrupti
-          architecto sunt ab assumenda, sint quos inventore dolor voluptate
-          ipsam. Neque temporibus vitae, in nobis quo accusantium sit impedit
-          dicta eveniet, molestias, explicabo fugiat iste aperiam. Aperiam ipsa
-          dicta doloremque recusandae officia nemo iusto laborum, consequatur
-          corrupti iure.
-          <SpanText>{today}</SpanText>
+          {today}!
         </MainText>
       </Motion>
     </>
