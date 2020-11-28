@@ -27,6 +27,7 @@ export const Navbar = ({ theme }) => {
               initial='beforeHover'
               whileHover='onHover'
               key={id}
+              onClick={() => setIsOpen(!isOpen)}
             >
               <Link to={url}>{text}</Link>
             </MenuLink>
