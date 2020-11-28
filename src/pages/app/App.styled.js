@@ -86,7 +86,8 @@ export const GlobalTheme = createGlobalStyle`
     /* color: ${({ theme }) => theme.primaryHover}; */
     color: var(--primaryFont);
     text-decoration: none;
-    
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent;
     &:hover {
     color: var(--secondaryFont);
     }
