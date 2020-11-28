@@ -8,6 +8,9 @@ const Left = styled.div`
   top: 0;
   bottom: 0;
   width: 10px;
+  @media (max-width: 768px) {
+    height: 0px;
+  }
 `;
 const Right = styled.div`
   z-index: 100;
@@ -17,6 +20,9 @@ const Right = styled.div`
   top: 0;
   bottom: 0;
   width: 10px;
+  @media (max-width: 768px) {
+    height: 0px;
+  }
 `;
 const Top = styled.div`
   z-index: 100;
@@ -26,6 +32,9 @@ const Top = styled.div`
   left: 0;
   right: 0;
   height: 10px;
+  @media (max-width: 768px) {
+    height: 0px;
+  }
 `;
 const Bottom = styled.div`
   z-index: 100;
@@ -35,6 +44,9 @@ const Bottom = styled.div`
   left: 0;
   right: 0;
   height: 10px;
+  @media (max-width: 768px) {
+    height: 0px;
+  }
 `;
 
 export { Left, Right, Top, Bottom };
