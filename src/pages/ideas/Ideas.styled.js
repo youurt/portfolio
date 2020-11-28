@@ -7,8 +7,19 @@ export const BorderSmall = styled(motion.div)`
     rgb(209, 98, 166, 0.9) 25%,
     rgb(238, 174, 202, 0.1) 50%
   );
-  padding: 10px;
+  padding: 8px;
   background-size: 2px 2px;
+`;
+
+export const BorderLong = styled(motion.div)`
+  background: radial-gradient(
+    circle,
+    rgb(209, 98, 166, 0.9) 25%,
+    rgb(238, 174, 202, 0.1) 50%
+  );
+  padding: 8px;
+  background-size: 2px 2px;
+  grid-column: 1 / span 2;
 `;
 
 export const Container = styled(motion.div)`
@@ -26,8 +37,19 @@ export const Grid = styled.div`
     margin-top: 20vw;
   }
 `;
+export const GridArchive = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 12px;
 
-export const Item = styled(motion.div)`
+  @media screen and (max-width: 660px) {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20vw;
+  }
+`;
+
+export const ItemSmall = styled(motion.div)`
   display: flex;
   flex-flow: wrap;
   z-index: 20;
@@ -36,6 +58,27 @@ export const Item = styled(motion.div)`
   padding: 40px 30px 10px 40px;
   min-width: 500px;
   min-height: 400px;
+  color: var(--secondaryFont);
+  border: 1px solid ${({ theme }) => theme.primaryLight};
+
+  a {
+    font-weight: 800;
+    font-size: 3.4rem;
+    cursor: pointer;
+  }
+
+  @media (max-width: 1068px) {
+    min-width: 300px;
+  }
+`;
+
+export const ItemLong = styled(motion.div)`
+  display: flex;
+  flex-flow: wrap;
+  z-index: 20;
+  align-items: center;
+  background: ${({ theme }) => theme.primaryDark};
+  padding: 40px 30px 10px 40px;
   color: var(--secondaryFont);
   border: 1px solid ${({ theme }) => theme.primaryLight};
 
