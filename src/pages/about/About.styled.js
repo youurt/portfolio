@@ -10,13 +10,10 @@ export const MainText = styled.div`
 
   color: var(--primaryFont);
   @media (max-width: 768px) {
-    font-size: 1.8em;
+    font-size: 1.6em;
+    font-weight: 100;
   }
 `;
 export const SpanText = styled.span`
   color: var(--secondaryFont);
-`;
-
-export const Header = styled.h1`
-  font-size: 8rem;
 `;

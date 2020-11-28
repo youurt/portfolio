@@ -20,15 +20,15 @@ export const About = () => {
   return (
     <>
       <Motion initial='out' animate='in' exit='out' variants={PageTrans}>
-        <SpanText>
-          <Header>
+        <h1>
+          <SpanText>
             <TextTransition
               text={HELLO[index % HELLO.length]}
               springConfig={presets.wobbly}
               inline={true}
             ></TextTransition>
-          </Header>
-        </SpanText>
+          </SpanText>
+        </h1>
 
         <MainText>
           My name is Uğur and I'm a multidisciplinary developer and designer,
