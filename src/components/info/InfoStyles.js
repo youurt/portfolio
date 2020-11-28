@@ -16,7 +16,7 @@ const LeftInfoStyle = styled.div`
   margin-block-end: 1em;
   z-index: 30;
   @media (max-width: 768px) {
-    left: -4.8rem;
+    left: -5.2rem;
     font-size: 1em;
     font-weight: 500;
   }
@@ -38,7 +38,7 @@ const RightInfoStyle = styled.div`
   margin-block-end: 1em;
   text-decoration: none;
   @media (max-width: 768px) {
-    right: -4.8rem;
+    right: -5.2rem;
     font-size: 1em;
     font-weight: 500;
   }
