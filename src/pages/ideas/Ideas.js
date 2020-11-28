@@ -25,7 +25,6 @@ export const Ideas = ({ theme }) => {
         {data.map((post, index) => {
           const { id, title, date, tags, postCategory } = post;
           const slug = string_to_slug(title);
-
           return (
             <BorderSmall>
               <Item
@@ -34,7 +33,6 @@ export const Ideas = ({ theme }) => {
                 whileHover='onHover'
               >
                 <Label>{postCategory}</Label>
-
                 <Link to={`/posts/${id}/${slug}`}>{title}</Link>
                 <Categories>
                   {tags.map((tag, index) => {

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import {
   Header,
   HeaderSmall,
@@ -24,11 +24,11 @@ export const Post = () => {
       <Motion initial='out' animate='in' exit='out' variants={PageTrans}>
         <Header>{title}</Header>
         <PostedOn>Posted on {date}</PostedOn>
+        <JsxParser
+          components={{ ReactEmbedGist, HeaderSmall, TextBlock }}
+          jsx={postContent}
+        />
       </Motion>
-      <JsxParser
-        components={{ ReactEmbedGist, HeaderSmall, TextBlock }}
-        jsx={postContent}
-      />
     </>
   );
 };
