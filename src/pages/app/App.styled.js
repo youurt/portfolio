@@ -10,6 +10,10 @@ export const GlobalTheme = createGlobalStyle`
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    -webkit-touch-callout:none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust:none;             /* prevent webkit from resizing text to fit */
+    -webkit-tap-highlight-color:rgba(0,0,0,0); /* prevent tap highlight color / shadow */
+    -webkit-user-select:none;
   }
 
   body {
@@ -83,11 +87,8 @@ export const GlobalTheme = createGlobalStyle`
   }
   
   a {
-    /* color: ${({ theme }) => theme.primaryHover}; */
     color: var(--primaryFont);
     text-decoration: none;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-    -webkit-tap-highlight-color: transparent;
     &:hover {
     color: var(--secondaryFont);
     }
