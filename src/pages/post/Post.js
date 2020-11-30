@@ -11,6 +11,7 @@ import {
 import ReactEmbedGist from 'react-embed-gist';
 import { PageTrans } from './../../utils/utils';
 import JsxParser from 'react-jsx-parser';
+const proxyurl = 'https://cors-anywhere.herokuapp.com/';
 const url = 'https://hidden-ridge-18950.herokuapp.com/api/blogposts';
 
 export const Post = () => {
@@ -19,7 +20,7 @@ export const Post = () => {
 
   const fetchIdeas = async () => {
     try {
-      const response = await fetch(url);
+      const response = await fetch(proxyurl + url);
       const ideas = await response.json();
       setData(ideas);
     } catch (error) {
