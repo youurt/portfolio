@@ -67,3 +67,10 @@ export const INTERESTS = [
   'Data',
   'Node.js',
 ];
+
+export const formatDatefromIso = (iso) => {
+  const date = new Date(iso);
+  return (
+    date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate()
+  );
+};

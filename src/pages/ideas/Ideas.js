@@ -12,7 +12,12 @@ import {
   GridArchive,
 } from './Ideas.styled';
 import { Link } from 'react-router-dom';
-import { string_to_slug, CardVariants, PageTrans } from './../../utils/utils';
+import {
+  string_to_slug,
+  CardVariants,
+  PageTrans,
+  formatDatefromIso,
+} from './../../utils/utils';
 import { useState, useEffect } from 'react';
 import { Loading } from '../../components/';
 
@@ -52,6 +57,7 @@ export const Ideas = () => {
       <Grid>
         {ideas.map((post, index) => {
           const { slugId, title, createdAt, tags, postCategory } = post;
+
           const slug = string_to_slug(title);
           if (postCategory === 'featured post') {
             return (
@@ -69,7 +75,7 @@ export const Ideas = () => {
                       return <Tag key={index}>{tag}</Tag>;
                     })}
                   </Categories>
-                  <LabelRight>{createdAt}</LabelRight>
+                  <LabelRight>{formatDatefromIso(createdAt)}</LabelRight>
                 </ItemSmall>
               </BorderSmall>
             );

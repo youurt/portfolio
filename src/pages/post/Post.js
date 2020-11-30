@@ -10,7 +10,7 @@ import {
 // import { data } from './../ideas/IdeasData';
 import ReactEmbedGist from 'react-embed-gist';
 import { Loading } from '../../components/';
-import { PageTrans } from './../../utils/utils';
+import { PageTrans, formatDatefromIso } from './../../utils/utils';
 import JsxParser from 'react-jsx-parser';
 const proxyurl = 'https://cors-anywhere.herokuapp.com/';
 const url = 'https://hidden-ridge-18950.herokuapp.com/api/blogposts';
@@ -59,7 +59,7 @@ export const Post = () => {
             variants={PageTrans}
           >
             <Header>{title}</Header>
-            <PostedOn>Posted on {createdAt}</PostedOn>
+            <PostedOn>Posted on {formatDatefromIso(createdAt)}</PostedOn>
             <JsxParser
               key={index}
               components={{ ReactEmbedGist, HeaderSmall, TextBlock }}
