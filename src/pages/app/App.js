@@ -47,7 +47,7 @@ const App = () => {
                 <Route exact path='/' component={About} />
                 <Route path='/ideas' component={Ideas} />
                 <Route path='/contact' component={Contact} />
-                <Route path='/posts/:id/:slug' component={Post} />
+                <Route path='/posts/:slugId/:slug' component={Post} />
               </Switch>
             </AnimatePresence>
           </Main>
