@@ -6,7 +6,8 @@ export const LoadingContainer = styled(motion.div)`
   height: 20rem;
   display: flex;
   justify-content: space-around;
-  margin: 15rem 15rem;
+  margin-left: 12.5rem;
+  padding-top: 9rem;
 `;
 
 export const LoadingCircle = styled(motion.span)`
