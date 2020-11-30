@@ -9,6 +9,7 @@ import {
 } from './Post.styled';
 // import { data } from './../ideas/IdeasData';
 import ReactEmbedGist from 'react-embed-gist';
+import { Loading } from '../../components/';
 import { PageTrans } from './../../utils/utils';
 import JsxParser from 'react-jsx-parser';
 const proxyurl = 'https://cors-anywhere.herokuapp.com/';
@@ -17,14 +18,18 @@ const url = 'https://hidden-ridge-18950.herokuapp.com/api/blogposts';
 export const Post = () => {
   const { slugId } = useParams();
   const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   const fetchIdeas = async () => {
+    setLoading(true);
     try {
       const response = await fetch(proxyurl + url);
       const ideas = await response.json();
       setData(ideas);
+      setLoading(false);
     } catch (error) {
       console.log(error);
+      setLoading(false);
     }
   };
 
@@ -36,6 +41,11 @@ export const Post = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  if (loading) {
+    return <Loading />;
+  }
+
   return (
     <>
       {filteredData.map((item, index) => {

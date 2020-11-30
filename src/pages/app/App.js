@@ -45,9 +45,13 @@ const App = () => {
             <AnimatePresence exitBeforeEnter>
               <Switch>
                 <Route exact path='/' component={About} />
-                <Route path='/ideas' component={Ideas} />
+                <Route path='/ideas' component={Ideas} theme={theme} />
                 <Route path='/contact' component={Contact} />
-                <Route path='/posts/:slugId/:slug' component={Post} />
+                <Route
+                  path='/posts/:slugId/:slug'
+                  component={Post}
+                  theme={theme}
+                />
               </Switch>
             </AnimatePresence>
           </Main>

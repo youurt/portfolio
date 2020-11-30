@@ -14,19 +14,24 @@ import {
 import { Link } from 'react-router-dom';
 import { string_to_slug, CardVariants, PageTrans } from './../../utils/utils';
 import { useState, useEffect } from 'react';
+import { Loading } from '../../components/';
+
 const proxyurl = 'https://cors-anywhere.herokuapp.com/';
 const url = 'https://hidden-ridge-18950.herokuapp.com/api/blogposts';
 
-export const Ideas = ({ theme }) => {
+export const Ideas = () => {
   const [ideas, setIdeas] = useState([]);
-
+  const [loading, setLoading] = useState(true);
   const fetchIdeas = async () => {
+    setLoading(true);
     try {
       const response = await fetch(proxyurl + url);
       const ideas = await response.json();
       setIdeas(ideas);
+      setLoading(false);
     } catch (error) {
       console.log(error);
+      setLoading(false);
     }
   };
 
@@ -34,14 +39,16 @@ export const Ideas = ({ theme }) => {
     fetchIdeas();
   }, []);
 
+  if (loading) {
+    return (
+      <Grid>
+        <Loading />
+      </Grid>
+    );
+  }
+
   return (
-    <Container
-      initial='out'
-      animate='in'
-      exit='out'
-      variants={PageTrans}
-      theme={theme}
-    >
+    <Container initial='out' animate='in' exit='out' variants={PageTrans}>
       <Grid>
         {ideas.map((post, index) => {
           const { slugId, title, createdAt, tags, postCategory } = post;
