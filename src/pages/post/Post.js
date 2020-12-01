@@ -23,11 +23,11 @@ export const Post = () => {
     setLoading(true);
 
     if (
-      localStorage.getItem('loadTime') &&
-      localStorage.getItem('loadTime') < Date.now()
+      sessionStorage.getItem('loadTime') &&
+      sessionStorage.getItem('loadTime') < Date.now()
     ) {
       setLoading(false);
-      setData(JSON.parse(localStorage.getItem('data')));
+      setData(JSON.parse(sessionStorage.getItem('data')));
     } else {
       try {
         const response = await fetch(url);

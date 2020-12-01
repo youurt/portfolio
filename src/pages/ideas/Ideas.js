@@ -31,19 +31,19 @@ export const Ideas = () => {
     setLoading(true);
 
     if (
-      localStorage.getItem('loadTime') &&
-      localStorage.getItem('loadTime') < Date.now()
+      sessionStorage.getItem('loadTime') &&
+      sessionStorage.getItem('loadTime') < Date.now()
     ) {
       setLoading(false);
-      setIdeas(JSON.parse(localStorage.getItem('data')));
+      setIdeas(JSON.parse(sessionStorage.getItem('data')));
     } else {
       try {
         const response = await fetch(url);
         const ideas = await response.json();
         setIdeas(ideas);
         setLoading(false);
-        localStorage.setItem('loadTime', Date.now());
-        localStorage.setItem('data', JSON.stringify(ideas));
+        sessionStorage.setItem('loadTime', Date.now());
+        sessionStorage.setItem('data', JSON.stringify(ideas));
       } catch (error) {
         setLoading(false);
       }
