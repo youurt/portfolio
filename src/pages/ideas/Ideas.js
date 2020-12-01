@@ -21,7 +21,6 @@ import {
 import { useState, useEffect } from 'react';
 import { Loading } from '../../components/';
 
-const proxyurl = 'https://cors-anywhere.herokuapp.com/';
 const url = 'https://hidden-ridge-18950.herokuapp.com/api/blogposts';
 
 export const Ideas = () => {
@@ -30,7 +29,7 @@ export const Ideas = () => {
   const fetchIdeas = async () => {
     setLoading(true);
     try {
-      const response = await fetch(proxyurl + url);
+      const response = await fetch(url);
       const ideas = await response.json();
       setIdeas(ideas);
       setLoading(false);
