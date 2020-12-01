@@ -14,7 +14,8 @@ export const Contact = () => {
             initial='beforeHover'
             whileHover='onHover'
           >
-            <a href='#'>Curriculum Vitae</a>
+            {/* <a href='#'>Get more Information</a> */}
+            <a href='mailto:info@ugurtigu.com'>Write me a mail!</a>
           </Item>
         </Border>
       </Motion>

@@ -5,7 +5,7 @@ import { PageTrans, HELLO, INTERESTS } from './../../utils/utils';
 
 export const About = () => {
   const [index, setIndex] = useState(0);
-  const [dateTime, setDateTime] = useState(new Date());
+  const [dateTime] = useState(new Date());
 
   useEffect(() => {
     const intervalId = setInterval(() => {

@@ -27,10 +27,9 @@ export const Footer = ({ theme, toggleTheme }) => {
       <FooterLast>
         <p>
           <strong>Connect with me on:</strong> <br />
-          <a href='#'>CodePen</a>, <a href='#'>GitHub</a>,{' '}
-          <a href='#'>Dev.to</a>, <br />
-          <a href='#'>Twitter</a>, <a href='#'>LinkedIn</a>,{' '}
-          <a href='#'>Patreon</a>
+          <a href='https://github.com/youurt'>GitHub</a>,{' '}
+          <a href='https://www.linkedin.com/in/youurt/'>LinkedIn</a>, <br />
+          <a href='https://twitter.com/_datacat_'>Twitter</a>
         </p>
       </FooterLast>
     </FooterGrid>

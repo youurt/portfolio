@@ -101,7 +101,7 @@ export const Ideas = () => {
           const slug = string_to_slug(title);
           if (postCategory === 'archive') {
             return (
-              <BorderLong>
+              <BorderLong key={index}>
                 <ItemLong
                   variants={CardVariants}
                   initial='beforeHover'
@@ -114,7 +114,7 @@ export const Ideas = () => {
                       return <Tag key={index}>{tag}</Tag>;
                     })}
                   </Categories>
-                  <LabelRight>{createdAt}</LabelRight>
+                  <LabelRight>{formatDatefromIso(createdAt)}</LabelRight>
                 </ItemLong>
               </BorderLong>
             );

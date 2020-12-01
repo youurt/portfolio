@@ -133,7 +133,7 @@ export const AsideRight = styled.aside`
 `;
 export const Main = styled.main`
   grid-area: main;
-  margin-bottom: 150px;
+  margin-bottom: 50px;
 `;
 export const FooterGrid = styled.footer`
   grid-area: footer;

@@ -75,14 +75,6 @@ export const Post = () => {
           </Motion>
         );
       })}
-      {/* <Motion initial='out' animate='in' exit='out' variants={PageTrans}>
-        <Header>{title}</Header>
-        <PostedOn>Posted on {createdAt}</PostedOn>
-        <JsxParser
-          components={{ ReactEmbedGist, HeaderSmall, TextBlock }}
-          jsx={postContent}
-        />
-      </Motion> */}
     </>
   );
 };

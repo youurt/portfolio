@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 export const Motion = styled(motion.div)``;
 export const Header = styled.h1`
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   font-weight: 600px;
   text-align: center;
 `;
