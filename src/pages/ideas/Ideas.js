@@ -26,16 +26,27 @@ const url = 'https://hidden-ridge-18950.herokuapp.com/api/blogposts';
 export const Ideas = () => {
   const [ideas, setIdeas] = useState([]);
   const [loading, setLoading] = useState(true);
+
   const fetchIdeas = async () => {
     setLoading(true);
-    try {
-      const response = await fetch(url);
-      const ideas = await response.json();
-      setIdeas(ideas);
+
+    if (
+      localStorage.getItem('loadTime') &&
+      localStorage.getItem('loadTime') < Date.now()
+    ) {
       setLoading(false);
-    } catch (error) {
-      console.log(error);
-      setLoading(false);
+      setIdeas(JSON.parse(localStorage.getItem('data')));
+    } else {
+      try {
+        const response = await fetch(url);
+        const ideas = await response.json();
+        setIdeas(ideas);
+        setLoading(false);
+        localStorage.setItem('loadTime', Date.now());
+        localStorage.setItem('data', JSON.stringify(ideas));
+      } catch (error) {
+        setLoading(false);
+      }
     }
   };
 

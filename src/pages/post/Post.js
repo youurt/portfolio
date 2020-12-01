@@ -21,15 +21,22 @@ export const Post = () => {
 
   const fetchIdeas = async () => {
     setLoading(true);
-    try {
-      const response = await fetch(url);
-      const ideas = await response.json();
-      setData(ideas);
+
+    if (
+      localStorage.getItem('loadTime') &&
+      localStorage.getItem('loadTime') < Date.now()
+    ) {
       setLoading(false);
-    } catch (error) {
-      console.log(error);
-      console.log(error);
-      setLoading(false);
+      setData(JSON.parse(localStorage.getItem('data')));
+    } else {
+      try {
+        const response = await fetch(url);
+        const ideas = await response.json();
+        setData(ideas);
+        setLoading(false);
+      } catch (error) {
+        setLoading(false);
+      }
     }
   };
 
