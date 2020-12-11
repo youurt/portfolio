@@ -1,25 +1,9 @@
-import {
-  Container,
-  Grid,
-  ItemSmall,
-  Label,
-  LabelRight,
-  BorderSmall,
-  Categories,
-  Tag,
-  BorderLong,
-  ItemLong,
-  GridArchive,
-} from './Ideas.styled';
-import { Link } from 'react-router-dom';
-import {
-  string_to_slug,
-  CardVariants,
-  PageTrans,
-  formatDatefromIso,
-} from './../../utils/utils';
+import { Container } from './Ideas.styled';
+import { PageTrans } from './../../utils/utils';
 import { useState, useEffect } from 'react';
 import { Loading } from '../../components/';
+import FeaturedPost from './FeaturedPost';
+import ArchivePost from './ArchivePost';
 
 const url = 'https://hidden-ridge-18950.herokuapp.com/api/blogposts';
 
@@ -55,74 +39,14 @@ export const Ideas = () => {
   }, []);
 
   if (loading) {
-    return (
-      <Grid>
-        <Loading />
-      </Grid>
-    );
+    return <Loading />;
   }
 
   return (
     <Container initial='out' animate='in' exit='out' variants={PageTrans}>
-      <Grid>
-        {ideas.map((post, index) => {
-          const { slugId, title, createdAt, tags, postCategory } = post;
-
-          const slug = string_to_slug(title);
-          if (postCategory === 'featured post') {
-            return (
-              <BorderSmall key={index}>
-                <ItemSmall
-                  variants={CardVariants}
-                  initial='beforeHover'
-                  whileHover='onHover'
-                  key={index}
-                >
-                  <Label>{postCategory}</Label>
-                  <Link to={`/posts/${slugId}/${slug}`}>{title}</Link>
-                  <Categories>
-                    {tags.map((tag, index) => {
-                      return <Tag key={index}>{tag}</Tag>;
-                    })}
-                  </Categories>
-                  <LabelRight>{formatDatefromIso(createdAt)}</LabelRight>
-                </ItemSmall>
-              </BorderSmall>
-            );
-          } else {
-            return <></>;
-          }
-        })}
-      </Grid>
+      <FeaturedPost ideas={ideas} />
       <br />
-      <GridArchive>
-        {ideas.map((post, index) => {
-          const { slugId, title, createdAt, tags, postCategory } = post;
-          const slug = string_to_slug(title);
-          if (postCategory === 'archive') {
-            return (
-              <BorderLong key={index}>
-                <ItemLong
-                  variants={CardVariants}
-                  initial='beforeHover'
-                  whileHover='onHover'
-                  key={index}
-                >
-                  <Link to={`/posts/${slugId}/${slug}`}>{title}</Link>
-                  <Categories>
-                    {tags.map((tag, index) => {
-                      return <Tag key={index}>{tag}</Tag>;
-                    })}
-                  </Categories>
-                  <LabelRight>{formatDatefromIso(createdAt)}</LabelRight>
-                </ItemLong>
-              </BorderLong>
-            );
-          } else {
-            return <></>;
-          }
-        })}
-      </GridArchive>
+      <ArchivePost ideas={ideas} />
     </Container>
   );
 };

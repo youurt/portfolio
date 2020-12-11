@@ -62,7 +62,6 @@ export const INTERESTS = [
   'Python',
   'React',
   'Frontend',
-  'TensorFlow.js',
   'CSS',
   'Data',
   'Node.js',

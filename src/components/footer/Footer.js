@@ -22,7 +22,7 @@ export const Footer = ({ theme, toggleTheme }) => {
           <strong>Mood:</strong>
         </p>
         <Toggle toggleTheme={toggleTheme} theme={theme} />
-        <Big>Disco/Work</Big>
+        <Big>Switch</Big>
       </FooterCenter>
       <FooterLast>
         <p>
