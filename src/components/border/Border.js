@@ -1,7 +1,7 @@
 import React from 'react';
 import { Left, Right, Top, Bottom } from './BorderStyles';
 
-export const Border = () => {
+const Border = () => {
   return (
     <>
       <Left />
@@ -11,3 +11,5 @@ export const Border = () => {
     </>
   );
 };
+
+export default Border;

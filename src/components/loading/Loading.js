@@ -27,12 +27,12 @@ const loadingCircleTransition = {
   ease: 'easeInOut',
 };
 
-export const Loading = () => {
+const Loading = () => {
   return (
     <LoadingContainer
       variants={LoadingContainerVariants}
-      initial='start'
-      animate='end'
+      initial="start"
+      animate="end"
     >
       <LoadingCircle
         variants={loadingCircleVariants}
@@ -49,3 +49,5 @@ export const Loading = () => {
     </LoadingContainer>
   );
 };
+
+export default Loading;

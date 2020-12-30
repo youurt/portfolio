@@ -1,3 +1,2 @@
-import { useDarkMode } from './useDarkMode';
-
-export { useDarkMode };
+export { default as useDarkMode } from './useDarkMode';
+export { default as useFetch } from './useFetch';

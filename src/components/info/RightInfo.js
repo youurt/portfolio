@@ -1,11 +1,13 @@
 import { RightInfoStyle } from './InfoStyles';
 
-export const RightInfo = () => {
+const RightInfo = () => {
   return (
     <>
       <RightInfoStyle>
-        <a href='mailto:info@ugurtigu.com'>info@ugurtigu.com</a>
+        <a href="mailto:info@ugurtigu.com">info@ugurtigu.com</a>
       </RightInfoStyle>
     </>
   );
 };
+
+export default RightInfo;

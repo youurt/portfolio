@@ -26,8 +26,8 @@ const ArchivePost = ({ ideas }) => {
               <BorderLong key={index}>
                 <ItemLong
                   variants={CardVariants}
-                  initial='beforeHover'
-                  whileHover='onHover'
+                  initial="beforeHover"
+                  whileHover="onHover"
                   key={index}
                 >
                   <Link to={`/posts/${slugId}/${slug}`}>{title}</Link>
@@ -41,7 +41,7 @@ const ArchivePost = ({ ideas }) => {
               </BorderLong>
             );
           } else {
-            return <></>;
+            return null;
           }
         })}
       </GridArchive>

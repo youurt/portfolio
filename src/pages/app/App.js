@@ -1,6 +1,6 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
-import { useDarkMode } from './../../hooks';
+import { useDarkMode, useFetch } from './../../hooks';
 import {
   Border,
   LeftInfo,
@@ -21,14 +21,17 @@ import {
 } from './App.styled';
 import { darkTheme, lightTheme } from './theme';
 import { AnimatePresence } from 'framer-motion';
+const url = 'https://hidden-ridge-18950.herokuapp.com/api/blogposts';
 
 const App = () => {
   const [theme, themeToggler, componentMounted] = useDarkMode();
   const themeMode = theme === 'light' ? lightTheme : darkTheme;
+  const { ideas, loading } = useFetch(url);
 
   if (!componentMounted) {
     return <div />;
   }
+
   return (
     <Router>
       <ThemeProvider theme={themeMode}>
@@ -44,11 +47,17 @@ const App = () => {
           <Main>
             <AnimatePresence exitBeforeEnter>
               <Switch>
-                <Route exact path='/' component={About} />
-                <Route path='/ideas' component={Ideas} theme={theme} />
-                <Route path='/contact' component={Contact} />
+                <Route exact path="/">
+                  <About />
+                </Route>
+                <Route path="/ideas">
+                  <Ideas theme={theme} ideas={ideas} loading={loading} />
+                </Route>
+                <Route path="/contact">
+                  <Contact />
+                </Route>
                 <Route
-                  path='/posts/:slugId/:slug'
+                  path="/posts/:slugId/:slug"
                   component={Post}
                   theme={theme}
                 />

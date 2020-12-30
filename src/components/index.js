@@ -1,9 +1,7 @@
-import { Border } from './border/Border';
-import { LeftInfo } from './info/LeftInfo';
-import { RightInfo } from './info/RightInfo';
-import { Navbar } from './navbar/Navbar';
-import { Toggle } from './toggler/Toggler';
-import { Footer } from './footer/Footer';
-import { Loading } from './loading/Loading';
-
-export { Border, LeftInfo, RightInfo, Toggle, Navbar, Footer, Loading };
+export { default as Border } from './border/Border';
+export { default as LeftInfo } from './info/LeftInfo';
+export { default as RightInfo } from './info/RightInfo';
+export { default as Navbar } from './navbar/Navbar';
+export { default as Toggle } from './toggler/Toggler';
+export { default as Footer } from './footer/Footer';
+export { default as Loading } from './loading/Loading';

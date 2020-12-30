@@ -4,7 +4,7 @@ import { links } from './NavbarData';
 import { MenuLink, Nav, Menu, Hamburger } from './Navbar.styled';
 import { ItemVariants } from './../../utils/utils';
 
-export const Navbar = ({ theme }) => {
+const Navbar = ({ theme }) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <Nav>
@@ -24,8 +24,8 @@ export const Navbar = ({ theme }) => {
           return (
             <MenuLink
               variants={ItemVariants}
-              initial='beforeHover'
-              whileHover='onHover'
+              initial="beforeHover"
+              whileHover="onHover"
               key={id}
               onClick={() => setIsOpen(!isOpen)}
             >
@@ -37,3 +37,5 @@ export const Navbar = ({ theme }) => {
     </Nav>
   );
 };
+
+export default Navbar;

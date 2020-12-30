@@ -28,8 +28,8 @@ const FeaturedPost = ({ ideas }) => {
               <BorderSmall key={index}>
                 <ItemSmall
                   variants={CardVariants}
-                  initial='beforeHover'
-                  whileHover='onHover'
+                  initial="beforeHover"
+                  whileHover="onHover"
                   key={index}
                 >
                   <Label>{postCategory}</Label>
@@ -44,7 +44,7 @@ const FeaturedPost = ({ ideas }) => {
               </BorderSmall>
             );
           } else {
-            return <></>;
+            return null;
           }
         })}
       </Grid>

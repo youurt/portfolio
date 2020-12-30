@@ -8,7 +8,7 @@ import {
   Big,
 } from './Footer.styled';
 
-export const Footer = ({ theme, toggleTheme }) => {
+const Footer = ({ theme, toggleTheme }) => {
   return (
     <FooterGrid>
       <FooterFirst>
@@ -27,11 +27,13 @@ export const Footer = ({ theme, toggleTheme }) => {
       <FooterLast>
         <p>
           <strong>Connect with me on:</strong> <br />
-          <a href='https://github.com/youurt'>GitHub</a>,{' '}
-          <a href='https://www.linkedin.com/in/youurt/'>LinkedIn</a>, <br />
-          <a href='https://twitter.com/_datacat_'>Twitter</a>
+          <a href="https://github.com/youurt">GitHub</a>,{' '}
+          <a href="https://www.linkedin.com/in/youurt/">LinkedIn</a>, <br />
+          <a href="https://twitter.com/_datacat_">Twitter</a>
         </p>
       </FooterLast>
     </FooterGrid>
   );
 };
+
+export default Footer;

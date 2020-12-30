@@ -3,7 +3,7 @@ import { LeftInfoStyle, SpanText } from './InfoStyles';
 import TextTransition, { presets } from 'react-text-transition';
 import { INTERESTS } from './../../utils/utils';
 
-export const LeftInfo = () => {
+const LeftInfo = () => {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
@@ -30,3 +30,5 @@ export const LeftInfo = () => {
     </>
   );
 };
+
+export default LeftInfo;
