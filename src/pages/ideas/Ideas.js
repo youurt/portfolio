@@ -4,7 +4,7 @@ import { Loading } from '../../components/';
 import FeaturedPost from './FeaturedPost';
 import ArchivePost from './ArchivePost';
 
-export const Ideas = ({ ideas, loading }) => {
+const Ideas = ({ ideas, loading }) => {
   if (loading) {
     return <Loading />;
   }
@@ -17,3 +17,5 @@ export const Ideas = ({ ideas, loading }) => {
     </Container>
   );
 };
+
+export default Ideas;

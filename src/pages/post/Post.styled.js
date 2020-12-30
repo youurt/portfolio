@@ -25,3 +25,12 @@ export const PostedOn = styled.p`
 `;
 
 export const Motion = styled(motion.div)``;
+
+export const Image = styled.img`
+  max-width: 600px;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  width: 100%;
+`;

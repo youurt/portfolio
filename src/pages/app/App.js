@@ -21,7 +21,7 @@ import {
 } from './App.styled';
 import { darkTheme, lightTheme } from './theme';
 import { AnimatePresence } from 'framer-motion';
-const url = 'https://hidden-ridge-18950.herokuapp.com/api/blogposts';
+import { url } from '../../utils/api';
 
 const App = () => {
   const [theme, themeToggler, componentMounted] = useDarkMode();
@@ -56,11 +56,9 @@ const App = () => {
                 <Route path="/contact">
                   <Contact />
                 </Route>
-                <Route
-                  path="/posts/:slugId/:slug"
-                  component={Post}
-                  theme={theme}
-                />
+                <Route path="/posts/:slugId/:slug">
+                  <Post theme={theme} ideas={ideas} loading={loading} />
+                </Route>
               </Switch>
             </AnimatePresence>
           </Main>

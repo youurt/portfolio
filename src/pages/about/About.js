@@ -3,7 +3,7 @@ import TextTransition, { presets } from 'react-text-transition';
 import { MainText, SpanText, Motion, Header } from './About.styled';
 import { PageTrans, HELLO, INTERESTS } from './../../utils/utils';
 
-export const About = () => {
+const About = () => {
   const [index, setIndex] = useState(0);
   const [dateTime] = useState(new Date());
 
@@ -19,7 +19,7 @@ export const About = () => {
   const today = dateTime.toLocaleDateString('en', { weekday: 'long' });
   return (
     <>
-      <Motion initial='out' animate='in' exit='out' variants={PageTrans}>
+      <Motion initial="out" animate="in" exit="out" variants={PageTrans}>
         <Header>
           <SpanText>
             <TextTransition
@@ -53,3 +53,5 @@ export const About = () => {
     </>
   );
 };
+
+export default About;

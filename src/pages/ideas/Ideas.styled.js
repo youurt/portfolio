@@ -58,7 +58,6 @@ export const ItemSmall = styled(motion.div)`
   padding: 40px 30px 10px 40px;
   min-width: 500px;
   min-height: 400px;
-  color: var(--secondaryFont);
   border: 1px solid ${({ theme }) => theme.primaryLight};
 
   a {

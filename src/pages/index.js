@@ -1,6 +1,4 @@
-import { About } from './about/About';
-import { Contact } from './contact/Contact';
-import { Ideas } from './ideas/Ideas';
-import { Post } from './post/Post';
-
-export { About, Contact, Ideas, Post };
+export { default as About } from './about/About';
+export { default as Contact } from './contact/Contact';
+export { default as Ideas } from './ideas/Ideas';
+export { default as Post } from './post/Post';
