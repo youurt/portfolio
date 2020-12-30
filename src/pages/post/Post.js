@@ -41,7 +41,7 @@ const Post = ({ ideas, loading }) => {
             <PostedOn>Posted on {formatDatefromIso(createdAt)}</PostedOn>
             <JsxParser
               key={index}
-              components={{ ReactEmbedGist, HeaderSmall, TextBlock }}
+              components={{ ReactEmbedGist, HeaderSmall, TextBlock, Image }}
               jsx={postContent}
             />
             {/* <Image src="https://raw.githubusercontent.com/youurt/pokemon-redux-thunk/main/imgs/img1.png" /> */}
