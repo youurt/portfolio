@@ -90,10 +90,10 @@ export const GlobalTheme = createGlobalStyle`
   }
   
   a {
-    color: var(--primaryFont);
+    color: var(--secondaryFont);
     text-decoration: none;
     &:hover {
-    color: var(--secondaryFont);
+    color: var(--primaryFont);
     }
   }
 
