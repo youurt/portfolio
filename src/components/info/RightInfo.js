@@ -4,7 +4,9 @@ const RightInfo = () => {
   return (
     <>
       <RightInfoStyle>
-        <a href="mailto:info@ugurtigu.com">info@ugurtigu.com</a>
+        <a href="mailto:info@ugurtigu.com" target="_blank">
+          info@ugurtigu.com
+        </a>
       </RightInfoStyle>
     </>
   );

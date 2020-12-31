@@ -31,8 +31,8 @@ const About = () => {
         </Header>
 
         <MainText>
-          My name is Uğur and I'm a multidisciplinary developer and designer.
-          Currently living in 🇩🇪, Aachen! With a strong interest in{' '}
+          My name is Ugur and I'm a multidisciplinary developer and designer 🍺.
+          Currently living in Germany, Aachen! With a strong interest in{' '}
           <SpanText>
             <TextTransition
               text={INTERESTS[index % INTERESTS.length]}
@@ -43,12 +43,22 @@ const About = () => {
           .
           <br />
           <br />
-          Front-end 🤟! I have builded a Netflix clone with React and Firebase!
-          It has full authentication and is tip-top! Other tech-stack I use is
-          node, express and redux! I also do data-mining / scraping with python!
+          Front-end 🤟! I have builded a Netflix Cone for classic movies & films
+          - Classicflix, check it out in the{' '}
+          <a href="https://www.ugurtigu.com/ideas">Projects</a> section! Other
+          tech-stack I use is node, express and redux! I builded a
+          CRUD-Application where I can post projects and also like them!
           <br />
           <br />
-          Stay 💉👨‍⚕️🩺 & have a nice {today}!
+          Another interest of mine is Data 👨‍💻. I am currently building an
+          Application with tensorflow.js for classification of clickbaits.
+          Therefore I scraped text-data and builded a dataset. I also scrape
+          data for my work in a research institution with Python.
+          <br />
+          <br />I am hungry for work. If you like to work with me, you can find
+          all the information in the{' '}
+          <a href="https://www.ugurtigu.com/contact">Contact</a> section! Stay
+          💉👨‍⚕️🩺 & have a nice {today}!
         </MainText>
       </Motion>
     </>
