@@ -4,6 +4,10 @@ import { motion } from 'framer-motion';
 export const Header = styled.h1`
   font-weight: 700;
   font-size: 3.5rem;
+
+  @media (max-width: 768px) {
+    font-size: 2em;
+  }
 `;
 
 export const HeaderSmall = styled.h2`
