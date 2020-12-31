@@ -43,29 +43,17 @@ export const PageTrans = {
 };
 
 export const HELLO = [
-  'nǐ hǎo',
-  'hola',
-  'hello',
-  'namaste',
-  'olá',
-  'hyālō',
-  'privet',
-  'guten tag',
-  'nggoleki',
-  'nóng hō',
-  'bonjour',
-  'merhaba',
-  'ciao',
-  'cześć’',
+  'Hola!',
+  'Hello!',
+  'Namaste!',
+  'Olá!',
+  'Privet!',
+  'Guten Tag!',
+  'Bonjour!',
+  'Merhaba!',
+  'Ciao!',
 ];
-export const INTERESTS = [
-  'Python',
-  'React',
-  'Frontend',
-  'CSS',
-  'Data',
-  'Node.js',
-];
+export const INTERESTS = ['Python', 'React', 'CSS', 'Data', 'Node', 'Redux'];
 
 export const formatDatefromIso = (iso) => {
   const date = new Date(iso);

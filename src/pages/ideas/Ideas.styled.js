@@ -57,7 +57,7 @@ export const Grid = styled.div`
 `;
 
 export const Label = styled.p`
-  font-size: 0.583333rem;
+  font-size: 0.9rem;
   font-weight: 600;
   text-transform: uppercase;
   margin-bottom: 10px;
@@ -68,7 +68,7 @@ export const LabelRight = styled.p`
   opacity: 0.75;
   bottom: 0;
   right: 13px;
-  font-size: 0.583333rem;
+  font-size: 0.9rem;
   font-weight: 600;
   text-transform: uppercase;
   margin-bottom: 10px;

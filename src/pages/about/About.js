@@ -51,12 +51,12 @@ const About = () => {
           <br />
           <br />
           Another interest of mine is Data 👨‍💻. I am currently building an
-          Application with tensorflow.js for classification of clickbaits.
-          Therefore I scraped text-data and builded a dataset. I also scrape
-          data for my work in a research institution with Python.
+          Application with tensorflow.js for classification of clickbaits. I
+          scraped a lot of text-data and labeled the first german dataset for
+          clickbaits.
           <br />
-          <br />I am hungry for work. If you like to work with me, you can find
-          all the information in the{' '}
+          <br />I am hungry for work. If you like to work with me, please
+          contact me. You can find all the information about me in the{' '}
           <a href="https://www.ugurtigu.com/contact">Contact</a> section! Stay
           💉👨‍⚕️🩺 & have a nice {today}!
         </MainText>
