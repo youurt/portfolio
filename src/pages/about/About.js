@@ -31,8 +31,8 @@ const About = () => {
         </Header>
 
         <MainText>
-          My name is Uğur and I'm a multidisciplinary developer and designer,
-          with a strong interest in{' '}
+          My name is Uğur and I'm a multidisciplinary developer and designer.
+          Currently living in 🇩🇪, Aachen! With a strong interest in{' '}
           <SpanText>
             <TextTransition
               text={INTERESTS[index % INTERESTS.length]}
@@ -40,14 +40,15 @@ const About = () => {
               inline={true}
             ></TextTransition>
           </SpanText>
-          . Currently living in Aachen, Germany.
-          <br />
-          <br />I have more than 4 years of experience as a developer & love
-          working within full-stack development, specially in front-end.
+          .
           <br />
           <br />
-          On this page I want to share my ideas and my code. I hope you enjoy
-          it! Stay bold & have a nice {today}!
+          Front-end 🤟! I have builded a Netflix clone with React and Firebase!
+          It has full authentication and is tip-top! Other tech-stack I use is
+          node, express and redux! I also do data-mining / scraping with python!
+          <br />
+          <br />
+          Stay 💉👨‍⚕️🩺 & have a nice {today}!
         </MainText>
       </Motion>
     </>

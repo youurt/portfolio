@@ -18,7 +18,8 @@ export const GlobalTheme = createGlobalStyle`
 
   body {
     background: ${({ theme }) => theme.primaryDark};
-    font-family: 'Open Sans', sans-serif;
+    
+    font-family: 'Indie Flower', cursive;
 
     /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; */
     justify-content: center;
@@ -34,6 +35,8 @@ export const GlobalTheme = createGlobalStyle`
     margin-block-end: 1em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
+
+    
   }
 
   strong{
