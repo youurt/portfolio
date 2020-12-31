@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import { motion } from 'framer-motion';
 
 export const BorderSmall = styled(motion.div)`
@@ -9,6 +9,35 @@ export const BorderSmall = styled(motion.div)`
   );
   padding: 8px;
   background-size: 2px 2px;
+`;
+
+export const ItemSmall = styled(motion.div)`
+  display: flex;
+  flex-flow: wrap;
+  z-index: 20;
+  align-items: center;
+  background: ${({ theme }) => theme.primaryDark};
+  padding: 40px 30px 10px 40px;
+  min-width: 500px;
+  min-height: 400px;
+  border: 1px solid ${({ theme }) => theme.primaryLight};
+
+  a {
+    font-weight: 800;
+    font-size: 3.4rem;
+    cursor: pointer;
+  }
+
+  @media (max-width: 1068px) {
+    min-width: 200px;
+    padding: 10px 10px;
+    text-align: center;
+
+    a {
+      font-weight: 400;
+      font-size: 2.4rem;
+    }
+  }
 `;
 
 export const BorderLong = styled(motion.div)`
@@ -31,7 +60,7 @@ export const Grid = styled.div`
   grid-template-columns: 1fr 1fr;
   grid-gap: 12px;
 
-  @media screen and (max-width: 660px) {
+  @media screen and (max-width: 960px) {
     display: flex;
     flex-direction: column;
     margin-top: 20vw;
@@ -42,32 +71,10 @@ export const GridArchive = styled.div`
   grid-template-columns: 1fr 1fr;
   grid-gap: 12px;
 
-  @media screen and (max-width: 660px) {
+  @media screen and (max-width: 960px) {
     display: flex;
     flex-direction: column;
     margin-top: 20vw;
-  }
-`;
-
-export const ItemSmall = styled(motion.div)`
-  display: flex;
-  flex-flow: wrap;
-  z-index: 20;
-  align-items: center;
-  background: ${({ theme }) => theme.primaryDark};
-  padding: 40px 30px 10px 40px;
-  min-width: 500px;
-  min-height: 400px;
-  border: 1px solid ${({ theme }) => theme.primaryLight};
-
-  a {
-    font-weight: 800;
-    font-size: 3.4rem;
-    cursor: pointer;
-  }
-
-  @media (max-width: 1068px) {
-    min-width: 300px;
   }
 `;
 
