@@ -8,7 +8,6 @@ import {
   Motion,
   Image,
 } from './Post.styled';
-import ReactEmbedGist from 'react-embed-gist';
 import { Loading } from '../../components/';
 import { PageTrans, formatDatefromIso } from './../../utils/utils';
 import JsxParser from 'react-jsx-parser';
@@ -41,7 +40,7 @@ const Post = ({ ideas, loading }) => {
             <PostedOn>Posted on {formatDatefromIso(createdAt)}</PostedOn>
             <JsxParser
               key={index}
-              components={{ ReactEmbedGist, HeaderSmall, TextBlock, Image }}
+              components={{ HeaderSmall, TextBlock, Image }}
               jsx={postContent}
             />
             {/* <Image src="https://raw.githubusercontent.com/youurt/pokemon-redux-thunk/main/imgs/img1.png" /> */}

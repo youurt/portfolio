@@ -28,7 +28,9 @@ export const PostedOn = styled.p`
   margin-bottom: 1.5em;
 `;
 
-export const Motion = styled(motion.div)``;
+export const Motion = styled(motion.div)`
+  text-align: center;
+`;
 
 export const Image = styled.img`
   max-width: 600px;
