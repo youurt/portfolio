@@ -43,8 +43,8 @@ const About = () => {
           .
           <br />
           <br />
-          Front-end 🤟! I have builded a Netflix Cone for classic movies & films
-          - Classicflix, check it out in the{' '}
+          Front-end 🤟! I have builded a Netflix clone for classic movies &
+          films - Classicflix, check it out in the{' '}
           <a href="https://www.ugurtigu.com/ideas">Projects</a> section! Other
           tech-stack I use is node, express and redux! I builded a
           CRUD-Application where I can post projects and also like them!
