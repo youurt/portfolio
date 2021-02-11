@@ -14,7 +14,7 @@ const Contact = () => {
             initial="beforeHover"
             whileHover="onHover"
           >
-            <a href="cvDownload.pdf" target="_blank">
+            <a href="https://portfoiliout.s3.amazonaws.com/cv.pdf">
               You can download my CV here!
             </a>
           </Item>

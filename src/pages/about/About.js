@@ -42,20 +42,11 @@ const About = () => {
           </SpanText>
           .
           <br />
+          <br />I created this website to upload and show my recent projects.
+          Feel free to have a look at the
+          <a href="https://www.ugurtigu.com/ideas">Projects</a> section 🤟!
           <br />
-          Front-end 🤟! I have builded a Netflix clone for classic movies &
-          films - Classicflix, check it out in the{' '}
-          <a href="https://www.ugurtigu.com/ideas">Projects</a> section! Other
-          tech-stack I use is node, express and redux! I builded a
-          CRUD-Application where I can post projects and also like them!
-          <br />
-          <br />
-          Another interest of mine is Data 👨‍💻. I am currently building an
-          Application with tensorflow.js for classification of clickbaits. I
-          scraped a lot of text-data and labeled the first german dataset for
-          clickbaits.
-          <br />
-          <br />I am hungry for work. If you like to work with me, please
+          <br />I am looking for work. If you like to work with me, please
           contact me. You can find all the information about me in the{' '}
           <a href="https://www.ugurtigu.com/contact">Contact</a> section! Stay
           💉👨‍⚕️🩺 & have a nice {today}!
