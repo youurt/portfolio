@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import TextTransition, { presets } from 'react-text-transition';
-import { MainText, SpanText, Motion, Header } from './About.styled';
-import { PageTrans, HELLO, INTERESTS } from './../../utils/utils';
+import React, { useEffect, useState } from "react";
+import TextTransition, { presets } from "react-text-transition";
+import { HELLO, INTERESTS, PageTrans } from "./../../utils/utils";
+import { Header, MainText, Motion, SpanText } from "./About.styled";
 
 const About = () => {
   const [index, setIndex] = useState(0);
@@ -16,7 +16,7 @@ const About = () => {
     };
   }, [index]);
 
-  const today = dateTime.toLocaleDateString('en', { weekday: 'long' });
+  const today = dateTime.toLocaleDateString("en", { weekday: "long" });
   return (
     <>
       <Motion initial="out" animate="in" exit="out" variants={PageTrans}>
@@ -31,8 +31,8 @@ const About = () => {
         </Header>
 
         <MainText>
-          My name is Ugur and I'm a multidisciplinary developer and designer 🍺.
-          Currently living in Germany, Aachen! With a strong interest in{' '}
+          My name is Uğur and I'm a multidisciplinary developer. Currently
+          living in Germany, Frankfurt! With a strong interest in{" "}
           <SpanText>
             <TextTransition
               text={INTERESTS[index % INTERESTS.length]}
@@ -42,14 +42,10 @@ const About = () => {
           </SpanText>
           .
           <br />
-          <br />I created this website to upload and show my recent projects.
-          Feel free to have a look at the
-          <a href="https://www.ugurtigu.com/ideas">Projects</a> section 🤟!
+          <br />I created this website to upload and show my recent projects. I
+          created this Website in React but currently refactoring it in angular.
           <br />
-          <br />I am looking for work. If you like to work with me, please
-          contact me. You can find all the information about me in the{' '}
-          <a href="https://www.ugurtigu.com/contact">Contact</a> section! Stay
-          💉👨‍⚕️🩺 & have a nice {today}!
+          So stay tuned & have a nice {today}!
         </MainText>
       </Motion>
     </>

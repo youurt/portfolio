@@ -1,6 +1,6 @@
-import React from 'react';
-import { Motion, Header, Text, Border, Item } from './Contact.styled';
-import { PageTrans, CardVariants } from './../../utils/utils';
+import React from "react";
+import { CardVariants, PageTrans } from "./../../utils/utils";
+import { Border, Header, Item, Motion, Text } from "./Contact.styled";
 
 const Contact = () => {
   return (
@@ -14,9 +14,7 @@ const Contact = () => {
             initial="beforeHover"
             whileHover="onHover"
           >
-            <a href="https://portfoiliout.s3.amazonaws.com/cv.pdf">
-              You can download my CV here!
-            </a>
+            <a href="../../../public/CV.pdf">You can download my CV here!</a>
           </Item>
         </Border>
       </Motion>
