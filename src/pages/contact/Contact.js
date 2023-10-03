@@ -14,7 +14,9 @@ const Contact = () => {
             initial="beforeHover"
             whileHover="onHover"
           >
-            <a href="../../../public/CV.pdf">You can download my CV here!</a>
+            <a href="https://github.com/youurt/portfolio/blob/main/public/CV.pdf">
+              You can download my CV here!
+            </a>
           </Item>
         </Border>
       </Motion>

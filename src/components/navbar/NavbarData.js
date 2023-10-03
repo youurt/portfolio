@@ -1,17 +1,17 @@
 export const links = [
   {
     id: 1,
-    url: '/',
-    text: 'about',
+    url: "/",
+    text: "about",
   },
+  // {
+  //   id: 2,
+  //   url: '/projects',
+  //   text: 'projects',
+  // },
   {
     id: 2,
-    url: '/projects',
-    text: 'projects',
-  },
-  {
-    id: 3,
-    url: '/contact',
-    text: 'contact',
+    url: "/contact",
+    text: "contact",
   },
 ];

@@ -31,8 +31,8 @@ const About = () => {
         </Header>
 
         <MainText>
-          My name is Uğur and I'm a multidisciplinary developer. Currently
-          living in Germany, Frankfurt! With a strong interest in{" "}
+          My name is Uğur and I'm a software developer. Currently living in
+          Germany, Frankfurt! With a strong interest in{" "}
           <SpanText>
             <TextTransition
               text={INTERESTS[index % INTERESTS.length]}
@@ -42,8 +42,9 @@ const About = () => {
           </SpanText>
           .
           <br />
-          <br />I created this website to upload and show my recent projects. I
-          created this Website in React but currently refactoring it in angular.
+          <br />I created this website to upload and show my recent projects.
+          For now it is WIP, since I created this Website in React back then but
+          currently refactoring it into angular.
           <br />
           So stay tuned & have a nice {today}!
         </MainText>
