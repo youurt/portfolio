@@ -44,7 +44,7 @@ const About = () => {
           <br />
           <br />I created this website to upload and show my recent projects.
           For now it is WIP, since I created this Website in React back then but
-          currently refactoring it into angular.
+          currently refactoring it into Angular.
           <br />
           So stay tuned & have a nice {today}!
         </MainText>
