@@ -13,7 +13,7 @@ const Footer = ({ theme, toggleTheme }) => {
     <FooterGrid>
       <FooterFirst>
         <p>
-          <strong>Ugur Tigu</strong> <br />
+          <strong>Uğur Tigu</strong> <br />
           Developer.
         </p>
       </FooterFirst>
